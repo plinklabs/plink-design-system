@@ -1,0 +1,35 @@
+name: plink_design_system
+description: Flutter binding for the Plink Labs design system — ThemeData factory and brand widgets translated from the shared design tokens.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  fonts:
+    # Fraunces — variable (wght axis driven via FontVariation in TextTheme).
+    - family: Fraunces
+      fonts:
+        - asset: fonts/fraunces/Fraunces-Variable.ttf
+    # Hanken Grotesk — variable (wght axis driven via FontVariation in TextTheme).
+    - family: Hanken Grotesk
+      fonts:
+        - asset: fonts/hanken-grotesk/HankenGrotesk-Variable.ttf
+    # Space Mono — static 400 / 700.
+    - family: Space Mono
+      fonts:
+        - asset: fonts/space-mono/SpaceMono-Regular.ttf
+          weight: 400
+        - asset: fonts/space-mono/SpaceMono-Bold.ttf
+          weight: 700
