@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Python (font tooling: fonttools, etc.)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs & debug output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Caches & build scratch
+.cache/
+.tmp/
+.fontwork/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local env
+.env
+.env.local
+.env.*.local
