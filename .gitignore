@@ -34,3 +34,14 @@ desktop.ini
 .env
 .env.local
 .env.*.local
+
+# Flutter / Dart (bindings/flutter)
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
+*.iml
+.flutter-plugins-dependencies
+**/test/**/failures/
