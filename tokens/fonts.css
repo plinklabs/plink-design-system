@@ -1,5 +1,43 @@
 /* Plink Labs — webfonts
    Display: Fraunces · UI/Body: Hanken Grotesk · Labels/mono: Space Mono
-   All OFL-licensed. Loaded from Google Fonts (woff2). */
+   All OFL-licensed, self-hosted (no CDN). Shared raw material for native
+   bindings too: woff2 here for the web, matching .ttf alongside each file
+   in assets/fonts/ for Flutter / WinUI. License: see OFL.txt per family. */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..650&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+/* Fraunces — variable (opsz 9–144 for optical sizing, wght 400–650) */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 650;
+  font-display: swap;
+  src: url('../assets/fonts/fraunces/Fraunces-Variable.woff2') format('woff2'),
+       url('../assets/fonts/fraunces/Fraunces-Variable.ttf') format('truetype');
+}
+
+/* Hanken Grotesk — variable (wght 400–600) */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../assets/fonts/hanken-grotesk/HankenGrotesk-Variable.woff2') format('woff2'),
+       url('../assets/fonts/hanken-grotesk/HankenGrotesk-Variable.ttf') format('truetype');
+}
+
+/* Space Mono — static 400 / 700 */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/space-mono/SpaceMono-Regular.woff2') format('woff2'),
+       url('../assets/fonts/space-mono/SpaceMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../assets/fonts/space-mono/SpaceMono-Bold.woff2') format('woff2'),
+       url('../assets/fonts/space-mono/SpaceMono-Bold.ttf') format('truetype');
+}
