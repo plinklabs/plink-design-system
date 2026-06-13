@@ -4,11 +4,14 @@
    bindings too: woff2 here for the web, matching .ttf alongside each file
    in assets/fonts/ for Flutter / WinUI. License: see OFL.txt per family. */
 
-/* Fraunces — variable (opsz 9–144 for optical sizing, wght 400–650) */
+/* Fraunces — variable (opsz 9–144 for optical sizing, wght 300–650).
+   Floor is 300 to match the brand display weight (plinklabs.org renders
+   Fraunces at 300); the self-hosted file carries the 300 master, so a 300
+   request resolves on the axis instead of clamping up. */
 @font-face {
   font-family: 'Fraunces';
   font-style: normal;
-  font-weight: 400 650;
+  font-weight: 300 650;
   font-display: swap;
   src: url('../assets/fonts/fraunces/Fraunces-Variable.woff2') format('woff2'),
        url('../assets/fonts/fraunces/Fraunces-Variable.ttf') format('truetype');

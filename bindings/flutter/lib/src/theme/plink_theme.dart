@@ -210,7 +210,7 @@ abstract final class PlinkTheme {
   }
 
   static TextTheme _textTheme(Color onSurface, Color onSurfaceMuted) {
-    // Display — Fraunces, optical, tight tracking, wght 560.
+    // Display — Fraunces, optical, tight tracking, wght 300.
     TextStyle display(double size, double lh) => TextStyle(
           fontFamily: PlinkType.displayFamily,
           package: PlinkType.fontPackage,

@@ -16,7 +16,10 @@
   --display-2-lh: 1.02;  /* @kind other */
   --display-3-lh: 1.06;  /* @kind other */
   --display-tracking: -0.018em;
-  --display-weight: 560;   /* Fraunces variable — confident, not heavy */
+  /* Matches the live brand (plinklabs.org renders Fraunces at 300). Fraunces
+     is optical (opsz 9–144); pair this weight with `font-optical-sizing: auto`
+     (the CSS default) so large headlines pick up the display cut. */
+  --display-weight: 300;   /* Fraunces variable — light, elegant */
 
   /* ── body scale (Hanken Grotesk) ────────────────────── */
   --text-xl: 1.1875rem;    /* lede / 19px */

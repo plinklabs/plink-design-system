@@ -64,7 +64,7 @@ void main() {
           PlinkType.packaged(PlinkType.bodyFamily));
       expect(theme.textTheme.labelMedium!.fontFamily,
           PlinkType.packaged(PlinkType.monoFamily));
-      // Fraunces display weight rides the wght variable axis at 560.
+      // Fraunces display weight rides the wght variable axis at 300.
       expect(
         theme.textTheme.displayLarge!.fontVariations!
             .firstWhere((FontVariation v) => v.axis == 'wght')

@@ -57,7 +57,7 @@ wrong. `#DB2777` on light, `#EC4899` on the ink section. Muted text `#6E6A62`; c
 `#9A958B`. **No gradients, no glassmorphism — flat fills only.** Never orange.
 
 **Type.**
-- **Display — Fraunces** (warm, characterful). Weight ~560, line-height 0.98–1.06, tracking −0.018em.
+- **Display — Fraunces** (warm, characterful). Weight 300 + optical sizing (opsz 9–144), line-height 0.98–1.06, tracking −0.018em.
   Oversized and flush-left; never centered.
 - **Body/UI — Hanken Grotesk** (400/500/600). 16px is the floor (projector legibility). Lede 19px.
 - **Labels/mono — Space Mono** (the "Labs" signature). Section numbers, tags, eyebrows, specs,
