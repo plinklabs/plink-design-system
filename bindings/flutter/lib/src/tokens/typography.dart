@@ -40,8 +40,9 @@ abstract final class PlinkType {
   // ── weights (CSS custom-property values) ──────────────────────────
   /// Fraunces display weight. Matches the live brand site
   /// (plinklabs.org: `Fraunces:opsz,wght@9..144,300`) — light and elegant.
-  /// NOTE: `tokens/typography.css` still says 560; that token is out of sync
-  /// with the brand and should be reconciled separately.
+  /// Mirrors `--display-weight: 300` in `tokens/typography.css`; the bundled
+  /// Fraunces carries the 300 master (wght axis 300–650) so this resolves on
+  /// the axis instead of clamping up.
   static const double displayWeight = 300;
   static const double bodyWeight = 400;
   static const double bodyWeightMedium = 500;
