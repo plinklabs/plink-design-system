@@ -24,7 +24,7 @@
   .mk-hero { position: relative; max-width: var(--container); margin: 0 auto; padding: 84px var(--gutter) 0; }
   .mk-hero__watermark { position: absolute; left: -40px; top: 0; width: 360px; height: 360px; opacity: 0.06; pointer-events: none; }
   .mk-hero .pl-eyebrow { margin-bottom: 26px; position: relative; }
-  .mk-hero__h1 { font-family: var(--font-display); font-weight: 560; font-size: clamp(3rem, 6.6vw, 5.4rem); line-height: 0.98; letter-spacing: -0.018em; margin: 0; max-width: 15ch; position: relative; }
+  .mk-hero__h1 { font-family: var(--font-display); font-weight: var(--display-weight); font-optical-sizing: auto; font-size: clamp(3rem, 6.6vw, 5.4rem); line-height: 0.98; letter-spacing: -0.018em; margin: 0; max-width: 15ch; position: relative; }
   .mk-hero__ping { display: inline-block; margin-left: 0.06em; }
   .mk-hero__lede { font-size: var(--text-xl); line-height: 1.5; color: var(--ink-60); max-width: 46ch; margin: 30px 0 0; }
   .mk-hero__actions { display: flex; align-items: center; gap: 22px; margin: 38px 0 0; }
@@ -36,7 +36,7 @@
   /* ── section head (shared) ───────────────────────── */
   .mk-section-head { max-width: 38ch; }
   .mk-section-num { font-family: var(--font-mono); font-size: var(--label); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--muted); }
-  .mk-section-title { font-family: var(--font-display); font-weight: 560; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.04; letter-spacing: -0.015em; margin: 16px 0 0; max-width: 18ch; }
+  .mk-section-title { font-family: var(--font-display); font-weight: var(--display-weight); font-optical-sizing: auto; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.04; letter-spacing: -0.015em; margin: 16px 0 0; max-width: 18ch; }
   .mk-section-lede { font-size: var(--text-lg); line-height: 1.5; color: var(--ink-60); margin: 18px 0 0; max-width: 50ch; }
 
   /* ── products ────────────────────────────────────── */
@@ -44,7 +44,7 @@
   .mk-product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
   .mk-product { display: flex; flex-direction: column; min-height: 220px; padding: var(--space-5); }
   .mk-product__mark { display: block; margin-bottom: 20px; }
-  .mk-product__name { font-family: var(--font-display); font-weight: 560; font-size: 1.5rem; letter-spacing: -0.01em; margin: 0 0 8px; }
+  .mk-product__name { font-family: var(--font-display); font-weight: var(--display-weight); font-optical-sizing: auto; font-size: 1.5rem; letter-spacing: -0.01em; margin: 0 0 8px; }
   .mk-product__desc { font-size: var(--text-sm); line-height: 1.5; color: var(--ink-60); margin: 0 0 20px; flex: 1; }
   .mk-product__foot { display: flex; align-items: center; justify-content: space-between; }
   .mk-product__open { font-family: var(--font-mono); font-size: var(--label); color: var(--ink); opacity: 0; transform: translateX(-4px); transition: opacity var(--dur-fast) var(--ease-standard), transform var(--dur-fast) var(--ease-standard); }
@@ -52,7 +52,7 @@
 
   /* ── mission — the one full-bleed ink section ─────── */
   .mk-mission { background: var(--ink); color: var(--on-ink); margin-top: 56px; padding: 96px 0; }
-  .mk-mission__statement { font-family: var(--font-display); font-weight: 560; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; letter-spacing: -0.015em; margin: 28px 0 0; max-width: 22ch; }
+  .mk-mission__statement { font-family: var(--font-display); font-weight: var(--display-weight); font-optical-sizing: auto; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; letter-spacing: -0.015em; margin: 28px 0 0; max-width: 22ch; }
   .mk-mission__cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 72px 0 0; }
   .mk-mission__col { border-top: 1px solid var(--hairline-on-ink); padding-top: 18px; }
   .mk-mission__col p { font-size: var(--text-base); line-height: 1.5; color: var(--on-ink); margin: 14px 0 0; max-width: 32ch; }
