@@ -1,0 +1,34 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="The ping motif" subtitle="Pulse, static bullet, and divider — the signature device" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--paper); font-family: var(--font-mono); }
+  #root { display: flex; align-items: center; gap: 48px; padding: 0 40px; height: 100px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .divwrap { padding: 0 40px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <div class="divwrap"><div id="div"></div></div>
+<script type="text/babel">
+  const { Ping, PingDivider } = window.PlinkLabsDesignSystem_59a0ef;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <>
+      <div className="item"><Ping size={40} /><span className="lbl">pulse</span></div>
+      <div className="item"><Ping mode="static" size={18} /><span className="lbl">static bullet</span></div>
+      <div className="item"><Ping mode="static" size={12} /><span className="lbl">list marker</span></div>
+    </>
+  );
+  ReactDOM.createRoot(document.getElementById('div')).render(<PingDivider position={0.4} />);
+</script>
+</body>
+</html>

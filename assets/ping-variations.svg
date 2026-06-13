@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1160 650" xmlns="http://www.w3.org/2000/svg" font-family="&#39;Hanken Grotesk&#39;, system-ui, sans-serif">
+  <rect x="0" y="0" width="1160" height="650" fill="#FAF7F2"></rect>
+
+  <text x="40" y="50" font-size="26" font-weight="700" fill="#1B1B23" letter-spacing="-0.4">Ping — variations</text>
+  <text x="40" y="73" font-size="14" fill="#9A958B">six treatments of the same idea · coral on paper</text>
+
+  
+  
+  <rect x="40" y="100" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="62" y="128" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">01</text>
+  <circle cx="210" cy="180" r="28" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.20"></circle>
+  <circle cx="210" cy="180" r="17" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.50"></circle>
+  <circle cx="210" cy="180" r="6.5" fill="#DB2777"></circle>
+  <text x="210" y="252" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Classic</text>
+  <text x="210" y="271" font-size="12.5" fill="#9A958B" text-anchor="middle">two rings · balanced</text>
+
+  
+  <rect x="410" y="100" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="432" y="128" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">02</text>
+  <circle cx="580" cy="180" r="18" fill="none" stroke="#DB2777" stroke-width="3.2" opacity="0.5"></circle>
+  <circle cx="580" cy="180" r="7" fill="#DB2777"></circle>
+  <text x="580" y="252" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Minimal</text>
+  <text x="580" y="271" font-size="12.5" fill="#9A958B" text-anchor="middle">one ring · best when tiny</text>
+
+  
+  <rect x="780" y="100" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="802" y="128" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">03</text>
+  <path d="M924 184 A26 26 0 0 0 976 184" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.22" stroke-linecap="round"></path>
+  <path d="M935 184 A15 15 0 0 0 965 184" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.5" stroke-linecap="round"></path>
+  <circle cx="950" cy="184" r="6.5" fill="#DB2777"></circle>
+  <text x="950" y="252" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Rising</text>
+  <text x="950" y="271" font-size="12.5" fill="#9A958B" text-anchor="middle">an upward pulse</text>
+
+  
+  
+  <rect x="40" y="310" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="62" y="338" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">04</text>
+  <path d="M198 380 A30 30 0 0 1 228 410" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.18" stroke-linecap="round"></path>
+  <path d="M198 391 A19 19 0 0 1 217 410" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.45" stroke-linecap="round"></path>
+  <circle cx="198" cy="410" r="6.5" fill="#DB2777"></circle>
+  <text x="210" y="462" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Directional</text>
+  <text x="210" y="481" font-size="12.5" fill="#9A958B" text-anchor="middle">a travelling signal</text>
+
+  
+  <rect x="410" y="310" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="432" y="338" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">05</text>
+  <circle cx="580" cy="392" r="30" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.14"></circle>
+  <circle cx="580" cy="392" r="22" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.28"></circle>
+  <circle cx="580" cy="392" r="13" fill="none" stroke="#DB2777" stroke-width="3" opacity="0.55"></circle>
+  <circle cx="580" cy="392" r="5.5" fill="#DB2777"></circle>
+  <text x="580" y="462" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Pulse</text>
+  <text x="580" y="481" font-size="12.5" fill="#9A958B" text-anchor="middle">three rings · strongest presence</text>
+
+  
+  <rect x="780" y="310" width="340" height="190" rx="18" fill="#FFFFFF" stroke="rgba(27,27,35,0.14)"></rect>
+  <text x="802" y="338" font-size="11" fill="#9A958B" font-family="ui-monospace, monospace">06</text>
+  <path d="M938 405.4 A18 18 0 1 1 962 405.4" fill="none" stroke="#DB2777" stroke-width="3.2" opacity="0.5" stroke-linecap="round"></path>
+  <circle cx="950" cy="392" r="6.5" fill="#DB2777"></circle>
+  <text x="950" y="462" font-size="15" font-weight="600" fill="#1B1B23" text-anchor="middle">Open</text>
+  <text x="950" y="481" font-size="12.5" fill="#9A958B" text-anchor="middle">a gap · quiet nod to open source</text>
+
+  
+  <text x="40" y="552" font-size="12" font-weight="600" fill="#9A958B" letter-spacing="1.5" font-family="ui-monospace, &#39;SF Mono&#39;, Menlo, monospace">SAME MARKS AT ~20PX — THE FAVICON TEST</text>
+
+  
+  <circle cx="120" cy="595" r="9" fill="none" stroke="#DB2777" stroke-width="1.6" opacity="0.25"></circle>
+  <circle cx="120" cy="595" r="5.5" fill="none" stroke="#DB2777" stroke-width="1.6" opacity="0.5"></circle>
+  <circle cx="120" cy="595" r="2.3" fill="#DB2777"></circle>
+  <text x="120" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">01</text>
+  
+  <circle cx="300" cy="595" r="8" fill="none" stroke="#DB2777" stroke-width="1.8" opacity="0.5"></circle>
+  <circle cx="300" cy="595" r="3" fill="#DB2777"></circle>
+  <text x="300" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">02</text>
+  
+  <path d="M289 597 A11 11 0 0 0 311 597" fill="none" stroke="#DB2777" stroke-width="0" opacity="0"></path>
+  <path d="M479 597 A11 11 0 0 0 501 597" fill="none" stroke="#DB2777" stroke-width="1.7" opacity="0.45" stroke-linecap="round"></path>
+  <circle cx="490" cy="597" r="2.6" fill="#DB2777"></circle>
+  <text x="490" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">03</text>
+  
+  <path d="M664 590 A12 12 0 0 1 676 602" fill="none" stroke="#DB2777" stroke-width="1.7" opacity="0.45" stroke-linecap="round"></path>
+  <circle cx="664" cy="602" r="2.6" fill="#DB2777"></circle>
+  <text x="670" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">04</text>
+  
+  <circle cx="840" cy="595" r="10" fill="none" stroke="#DB2777" stroke-width="1.4" opacity="0.18"></circle>
+  <circle cx="840" cy="595" r="6.5" fill="none" stroke="#DB2777" stroke-width="1.4" opacity="0.35"></circle>
+  <circle cx="840" cy="595" r="3" fill="none" stroke="#DB2777" stroke-width="1.4" opacity="0.6"></circle>
+  <circle cx="840" cy="595" r="1.6" fill="#DB2777"></circle>
+  <text x="840" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">05</text>
+  
+  <path d="M1014 601 A8 8 0 1 1 1026 601" fill="none" stroke="#DB2777" stroke-width="1.8" opacity="0.5" stroke-linecap="round"></path>
+  <circle cx="1020" cy="595" r="2.8" fill="#DB2777"></circle>
+  <text x="1020" y="624" font-size="11" fill="#9A958B" text-anchor="middle" font-family="ui-monospace, monospace">06</text>
+</svg>

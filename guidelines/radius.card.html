@@ -1,0 +1,24 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Radius & hairlines" subtitle="One crisp radius language (~6px). No soft 16px." -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-mono); padding: 24px 28px; box-sizing: border-box; }
+  .row { display: flex; gap: 24px; align-items: flex-end; }
+  .item { text-align: center; }
+  .box { width: 84px; height: 64px; border: 1px solid var(--ink); background: var(--paper-2); }
+  .nm { font-size: 11px; color: var(--ink); margin-top: 10px; }
+  .v { font-size: 11px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="item"><div class="box" style="border-radius:4px;"></div><div class="nm">--radius-sm</div><div class="v">4px</div></div>
+    <div class="item"><div class="box" style="border-radius:6px;"></div><div class="nm">--radius</div><div class="v">6px · default</div></div>
+    <div class="item"><div class="box" style="border-radius:8px;"></div><div class="nm">--radius-lg</div><div class="v">8px · large only</div></div>
+    <div class="item"><div class="box" style="border-radius:0;"></div><div class="nm">square</div><div class="v">no pills</div></div>
+  </div>
+</body>
+</html>

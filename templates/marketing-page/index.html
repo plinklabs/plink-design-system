@@ -1,0 +1,105 @@
+<!-- @template name="Marketing page" description="Plink Labs open-source landing: editorial hero, product grid, one full-bleed ink section" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plink Labs — marketing page template</title>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="./ds-base.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .spark { color: var(--magenta); }
+  .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding-top: 26px; }
+  .nav__links { display: flex; align-items: center; gap: 26px; font-size: var(--text-sm); font-weight: 500; }
+  .nav__links a { opacity: 0.78; }
+  .nav__links a:hover { opacity: 1; }
+  .hero { position: relative; padding-top: 84px; }
+  .hero h1 { font-family: var(--font-display); font-weight: 560; font-size: clamp(3rem, 6.6vw, 5.4rem); line-height: 0.98; letter-spacing: -0.018em; margin: 26px 0 0; max-width: 15ch; }
+  .hero p.lede { font-size: var(--text-xl); line-height: 1.5; color: var(--ink-60); max-width: 46ch; margin: 30px 0 0; }
+  .hero .actions { display: flex; align-items: center; gap: 22px; margin: 38px 0 0; }
+  .hero .scope { margin: 70px 0 22px; }
+  .divider { padding: 56px 0; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+  .pname { font-family: var(--font-display); font-weight: 560; font-size: 1.5rem; letter-spacing: -0.01em; margin: 16px 0 8px; }
+  .pdesc { font-size: var(--text-sm); line-height: 1.5; color: var(--ink-60); margin: 0; }
+  .secnum { font-family: var(--font-mono); font-size: var(--label); letter-spacing: var(--label-tracking); text-transform: uppercase; color: var(--muted); }
+  .sectitle { font-family: var(--font-display); font-weight: 560; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.04; letter-spacing: -0.015em; margin: 16px 0 0; max-width: 18ch; }
+  .ink-section { background: var(--ink); color: var(--on-ink); margin-top: 56px; padding: 96px 0; }
+  .ink-section .statement { font-family: var(--font-display); font-weight: 560; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.08; letter-spacing: -0.015em; margin: 24px 0 40px; max-width: 22ch; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
+    function mountTemplate() {
+      const NS = window.PlinkLabsDesignSystem_59a0ef;
+      if (!NS || !window.ReactDOM) { return setTimeout(mountTemplate, 30); }
+      const { Logo, Eyebrow, Button, Card, Badge, Ping, PingDivider, ScopeRule, SpecStrip } = NS;
+
+      const products = [
+        { num: '01', name: 'Metronome', tag: 'Rhythm', desc: 'A precise, projector-legible metronome with a visual ping on every beat.' },
+        { num: '02', name: 'Tuner', tag: 'Pitch', desc: 'Chromatic tuner with a calm needle. Fully offline — no mic data leaves the room.' },
+        { num: '03', name: 'Timer', tag: 'Classroom', desc: 'Big, readable countdowns. Plinks gently when time is up.' },
+      ];
+
+      function App() {
+        return (
+          <>
+            <div className="wrap">
+              <nav className="nav">
+                <Logo size={26} />
+                <div className="nav__links">
+                  <a href="#">Products</a><a href="#">Mission</a><a href="#">GitHub</a>
+                  <Button as="a" href="#" variant="secondary" size="sm">Browse products</Button>
+                </div>
+              </nav>
+              <header className="hero">
+                <Eyebrow>Open source — free for every classroom</Eyebrow>
+                <h1>Good <span className="spark">software</span> for the classroom</h1>
+                <p className="lede">Made by teachers, free for everyone. Open source, no ads, no tracking.</p>
+                <div className="actions">
+                  <Button variant="primary">Browse the products →</Button>
+                  <Button variant="ghost"><span style={{color:'var(--magenta)'}}>★</span> Star on GitHub</Button>
+                </div>
+                <div className="scope"><ScopeRule position={0.36} /></div>
+                <SpecStrip items={["GPL-3.0", "GDPR-clean", "Works offline", "16px → projector"]} />
+              </header>
+              <div className="divider"><PingDivider position={0.36} /></div>
+              <section>
+                <span className="secnum">02 / Products</span>
+                <h2 className="sectitle">Small instruments, <span className="spark">one</span> lab.</h2>
+                <div className="grid">
+                  {products.map((p) => (
+                    <Card key={p.num} num={p.num} interactive>
+                      <Ping mode="static" size={20} />
+                      <h3 className="pname">{p.name}</h3>
+                      <p className="pdesc">{p.desc}</p>
+                      <div style={{marginTop:16}}><Badge variant="outline">{p.tag}</Badge></div>
+                    </Card>
+                  ))}
+                </div>
+              </section>
+            </div>
+            <section className="ink-section">
+              <div className="wrap">
+                <Eyebrow onInk>03 / Mission</Eyebrow>
+                <p className="statement">Software for school should be <span style={{color:'var(--magenta-on-dark)'}}>quiet, honest, and free</span>.</p>
+                <Button variant="primary">Read the manifesto →</Button>
+              </div>
+            </section>
+          </>
+        );
+      }
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    }
+    mountTemplate();
+  </script>
+</body>
+</html>

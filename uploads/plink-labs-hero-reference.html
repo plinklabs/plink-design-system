@@ -1,0 +1,147 @@
+<!-- Plink Labs — hero reference target. Hand to Claude Design with "match this feel." -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..650&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+  :root{
+    --ink:#1B1B23;
+    --paper:#FAF7F2;
+    --magenta:#DB2777;
+    --muted:#6E6A62;
+    --line:rgba(27,27,35,0.14);
+  }
+  *{box-sizing:border-box;}
+  .plink-page{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    margin:0; padding:0;
+    -webkit-font-smoothing:antialiased;
+    overflow:hidden;
+  }
+  .plink-wrap{max-width:1120px; margin:0 auto; padding:0 40px;}
+
+  /* nav */
+  .pl-nav{display:flex; align-items:center; justify-content:space-between; padding:26px 0 0;}
+  .pl-brand{display:flex; align-items:center; gap:11px;}
+  .pl-brand .wm{font-size:20px; font-weight:600; letter-spacing:-0.3px;}
+  .pl-brand .wm .labs{color:var(--muted); font-weight:500;}
+  .pl-navlinks{display:flex; align-items:center; gap:26px; font-size:14.5px; font-weight:500;}
+  .pl-navlinks a{color:var(--ink); text-decoration:none; opacity:.78;}
+  .pl-navlinks a:hover{opacity:1;}
+  .pl-navbtn{background:var(--ink); color:var(--paper); padding:9px 16px; border-radius:8px; font-size:14px; font-weight:600;}
+
+  /* hero */
+  .pl-hero{position:relative; padding:84px 0 0;}
+  .pl-watermark{position:absolute; left:-120px; top:-40px; width:420px; height:420px; opacity:.5; pointer-events:none;}
+  .pl-eyebrow{
+    font-family:'Space Mono',monospace; font-size:12px; letter-spacing:2.2px;
+    text-transform:uppercase; color:var(--ink); display:flex; align-items:center; gap:10px; margin:0 0 26px;
+  }
+  .pl-eyebrow .dot{width:9px; height:9px; border-radius:50%; background:var(--magenta); display:inline-block;}
+  .pl-h1{
+    font-family:'Fraunces',Georgia,serif; font-weight:560;
+    font-size:clamp(3rem,6.6vw,5.4rem); line-height:0.98; letter-spacing:-1.4px;
+    margin:0; max-width:14ch;
+  }
+  .pl-h1 .ping{display:inline-block; vertical-align:baseline; margin-left:2px;}
+  .pl-lede{
+    font-size:19px; line-height:1.5; color:var(--muted); max-width:46ch; margin:30px 0 0; font-weight:400;
+  }
+  .pl-actions{display:flex; align-items:center; gap:26px; margin:38px 0 0;}
+  .pl-cta{
+    background:var(--magenta); color:#fff; border:none; font-family:inherit;
+    font-size:15.5px; font-weight:600; padding:14px 22px; border-radius:9px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:9px; text-decoration:none;
+  }
+  .pl-cta:hover{background:#c01f68;}
+  .pl-ghost{
+    font-family:'Space Mono',monospace; font-size:14px; color:var(--ink); text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px; opacity:.85;
+  }
+  .pl-ghost:hover{opacity:1;}
+  .pl-ghost .star{color:var(--magenta);}
+
+  /* oscilloscope divider — the signature */
+  .pl-scope{margin:74px 0 0; width:100%;}
+  .pl-ring{transform-box:fill-box; transform-origin:center;}
+  @media (prefers-reduced-motion: no-preference){
+    .pl-ring{animation:ping 1.9s ease-out infinite;}
+    .pl-ring.b{animation-delay:-0.95s;}
+  }
+  @keyframes ping{
+    0%{transform:scale(0.3); opacity:.55;}
+    100%{transform:scale(1); opacity:0;}
+  }
+
+  /* spec strip */
+  .pl-specs{
+    display:flex; flex-wrap:wrap; gap:0; margin:22px 0 0;
+    font-family:'Space Mono',monospace; font-size:12px; letter-spacing:0.6px; color:var(--muted);
+    text-transform:uppercase; border-top:1px solid var(--line); padding-top:18px;
+  }
+  .pl-specs span{padding:0 18px; border-right:1px solid var(--line);}
+  .pl-specs span:first-child{padding-left:0;}
+  .pl-specs span:last-child{border-right:none;}
+
+  .pl-foot{font-family:'Space Mono',monospace; font-size:11px; color:var(--muted); opacity:.7; padding:40px 0 30px; letter-spacing:.5px;}
+</style>
+
+<div class="plink-page">
+  <div class="plink-wrap">
+
+    <nav class="pl-nav">
+      <div class="pl-brand">
+        <svg width="26" height="26" viewBox="0 0 120 120" aria-hidden="true">
+          <path d="M36 86.8 A36 36 0 1 1 84 86.8" fill="none" stroke="#DB2777" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="60" cy="60" r="13" fill="#DB2777"/>
+        </svg>
+        <span class="wm">plink <span class="labs">labs</span></span>
+      </div>
+      <div class="pl-navlinks">
+        <a href="#">Products</a>
+        <a href="#">Mission</a>
+        <a href="#">GitHub</a>
+        <a href="#" class="pl-navbtn">Browse products</a>
+      </div>
+    </nav>
+
+    <section class="pl-hero">
+      <!-- faint open-ring watermark -->
+      <svg class="pl-watermark" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M36 86.8 A36 36 0 1 1 84 86.8" fill="none" stroke="#DB2777" stroke-width="2.4" opacity="0.14"/>
+        <circle cx="60" cy="60" r="9" fill="#DB2777" opacity="0.14"/>
+      </svg>
+
+      <p class="pl-eyebrow"><span class="dot"></span> Open source — free for every classroom</p>
+
+      <h1 class="pl-h1">Good software for the classroom<span class="ping"><svg width="22" height="22" viewBox="0 0 120 120" aria-hidden="true"><path d="M36 86.8 A36 36 0 1 1 84 86.8" fill="none" stroke="#DB2777" stroke-width="11" stroke-linecap="round"/><circle cx="60" cy="60" r="15" fill="#DB2777"/></svg></span></h1>
+
+      <p class="pl-lede">Made by teachers, free for everyone. Open source, no ads, no tracking — just tools that help students learn and teachers teach.</p>
+
+      <div class="pl-actions">
+        <a href="#" class="pl-cta">Browse the products →</a>
+        <a href="#" class="pl-ghost"><span class="star">★</span> Star on GitHub</a>
+      </div>
+
+      <!-- oscilloscope: a flat signal that plinks -->
+      <svg class="pl-scope" viewBox="0 0 1120 80" preserveAspectRatio="none" aria-hidden="true">
+        <line x1="0" y1="40" x2="372" y2="40" stroke="#1B1B23" stroke-opacity="0.14"/>
+        <path d="M372 40 L392 40 L400 17 L408 40 L416 63 L424 40 L444 40" fill="none" stroke="#DB2777" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="444" y1="40" x2="1120" y2="40" stroke="#1B1B23" stroke-opacity="0.14"/>
+        <circle class="pl-ring" cx="408" cy="40" r="22" fill="none" stroke="#DB2777" stroke-width="2"/>
+        <circle class="pl-ring b" cx="408" cy="40" r="22" fill="none" stroke="#DB2777" stroke-width="2"/>
+        <circle cx="408" cy="40" r="4.5" fill="#DB2777"/>
+      </svg>
+
+      <div class="pl-specs">
+        <span>GPL-3.0</span>
+        <span>GDPR-clean</span>
+        <span>Works offline</span>
+        <span>16px → projector</span>
+      </div>
+
+      <p class="pl-foot">// reference target — hero only. match the feel, not the pixels.</p>
+    </section>
+
+  </div>
+</div>

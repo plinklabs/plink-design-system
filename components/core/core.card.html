@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Core — Button · Badge · Card" subtitle="Flat fills, hairline borders, mono chips" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); padding: 28px; box-sizing: border-box; }
+  .group { margin-bottom: 26px; }
+  .glabel { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 12px; }
+  .row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  h3 { font-family: var(--font-display); font-weight: 560; font-size: 19px; margin: 0 0 6px; }
+  p.body { font-size: 14px; color: var(--ink-60); margin: 0; line-height: 1.45; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+<script type="text/babel">
+  const { Button, Badge, Card, SpecStrip } = window.PlinkLabsDesignSystem_59a0ef;
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    <>
+      <div className="group">
+        <div className="glabel">Button — variants</div>
+        <div className="row">
+          <Button variant="primary">Browse products →</Button>
+          <Button variant="secondary">View source</Button>
+          <Button variant="outline">Docs</Button>
+          <Button variant="ghost">★ Star</Button>
+          <Button variant="primary" disabled>Disabled</Button>
+        </div>
+      </div>
+      <div className="group">
+        <div className="glabel">Badge — mono chips</div>
+        <div className="row">
+          <Badge variant="outline">GPL-3.0</Badge>
+          <Badge variant="spark" dot>Live</Badge>
+          <Badge variant="ink">v2.4</Badge>
+          <Badge variant="accent">New</Badge>
+        </div>
+      </div>
+      <div className="group">
+        <div className="glabel">Card — flat + hairline</div>
+        <div className="cards">
+          <Card num="01"><h3>Metronome</h3><p className="body">A precise classroom metronome. Works offline.</p></Card>
+          <Card variant="ink" num="02"><h3 style={{color:'var(--on-ink)'}}>Tuner</h3><p className="body" style={{color:'var(--on-ink-muted)'}}>The one full-bleed ink panel.</p></Card>
+        </div>
+      </div>
+      <div className="group">
+        <div className="glabel">SpecStrip</div>
+        <SpecStrip items={["GPL-3.0", "GDPR-clean", "Works offline", "16px → projector"]} />
+      </div>
+    </>
+  );
+</script>
+</body>
+</html>

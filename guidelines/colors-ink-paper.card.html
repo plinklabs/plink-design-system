@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Ink & Paper" subtitle="The two workhorses — ~90% of every screen" -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; background: var(--paper); font-family: var(--font-mono); }
+  .row { display: flex; gap: 0; }
+  .sw { flex: 1; height: 150px; display: flex; flex-direction: column; justify-content: flex-end; padding: 14px; box-sizing: border-box; }
+  .sw .hex { font-size: 12px; letter-spacing: 0.04em; }
+  .sw .nm { font-size: 11px; opacity: 0.7; margin-top: 2px; }
+  .paper { background: var(--paper); color: var(--ink); border-right: 1px solid var(--hairline); }
+  .ink { background: var(--ink); color: var(--paper); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw paper"><div class="hex">#FAF7F2</div><div class="nm">--paper</div></div>
+    <div class="sw ink"><div class="hex">#1B1B23</div><div class="nm">--ink</div></div>
+  </div>
+</body>
+</html>
