@@ -33,6 +33,7 @@ See [`example.html`](example.html) for every component on paper and on ink.
 | `.pl-card` | `--raised` `--ink` `--interactive` · `.pl-card__num` |
 | `.pl-input` / `.pl-field` | `.pl-field__label` · `.pl-input--invalid` · `textarea.pl-input` |
 | `.pl-eyebrow` | `--on-ink` · `.pl-eyebrow__dot` |
+| `.pl-identity-rule` | thin top identity bar in `--product-accent` (see below) |
 | `.pl-ping` | `--pulse` `--static` `--on-ink` · size via `--pl-ping-size` (default 28px) |
 
 ### The ping
@@ -63,6 +64,24 @@ on-ink form automatically** — no per-component modifiers. The first consumer
   <input class="pl-input" type="text">                      <!-- on-ink field -->
 </section>
 ```
+
+## Per-product accent — `--product-accent`
+
+An app layers its own identity by overriding **one** token and supplying its own
+product mark. Magenta stays the spark; the accent only tints the product mark and
+the one identity rule. Defaults to ink.
+
+```css
+.app-root { --product-accent: #2563EB; }   /* clearly NOT magenta */
+```
+
+```html
+<div class="pl-identity-rule" aria-hidden="true"></div>   <!-- thin top bar -->
+<svg style="color:var(--product-accent)"> … your product mark … </svg>
+```
+
+See the "DS-5 · per-product accent" block in [`example.html`](example.html) and
+the full convention in the repo `readme.md` § "Per-product accent".
 
 ## Fonts
 

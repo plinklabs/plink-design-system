@@ -57,4 +57,39 @@ void main() {
     await tester.pump(const Duration(milliseconds: 200));
     expect(tester.hasRunningAnimations, isFalse);
   });
+
+  Color identityRuleColor(WidgetTester tester) => tester
+      .widget<ColoredBox>(find.descendant(
+        of: find.byType(PlinkIdentityRule),
+        matching: find.byType(ColoredBox),
+      ))
+      .color;
+
+  testWidgets('PlinkIdentityRule falls back to the neutral product default',
+      (tester) async {
+    // _host uses PlinkTheme.paper, which ships the default accent (ink).
+    await tester.pumpWidget(_host(const PlinkIdentityRule()));
+    expect(identityRuleColor(tester), PlinkColors.productAccent);
+  });
+
+  testWidgets('PlinkIdentityRule paints the app-overridden product accent',
+      (tester) async {
+    const Color appAccent = Color(0xFF2563EB);
+    await tester.pumpWidget(MaterialApp(
+      theme: PlinkTheme.paper.copyWith(
+        extensions: const <ThemeExtension<dynamic>>[
+          PlinkProductAccent(appAccent),
+        ],
+      ),
+      home: const Scaffold(body: PlinkIdentityRule()),
+    ));
+    expect(identityRuleColor(tester), appAccent);
+  });
+
+  testWidgets('PlinkIdentityRule honours an explicit accent override',
+      (tester) async {
+    const Color forced = Color(0xFF0F8A5F);
+    await tester.pumpWidget(_host(const PlinkIdentityRule(accent: forced)));
+    expect(identityRuleColor(tester), forced);
+  });
 }

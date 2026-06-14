@@ -82,6 +82,32 @@ void main() {
         reason: 'Space Mono did not load (fell back)');
   });
 
+  testWidgets(
+      'per-product accent: the identity rule renders the app accent end-to-end',
+      (tester) async {
+    tester.view.physicalSize = const Size(900, 1500);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+
+    await tester.pumpWidget(const PlinkGalleryApp());
+    await tester.pump(const Duration(milliseconds: 300));
+
+    // The real app overrides PlinkProductAccent at its theme root; the top
+    // identity rule must paint that accent (proving the override path through a
+    // real MaterialApp, not just a unit-level copyWith).
+    final ColoredBox bar = tester.widget<ColoredBox>(find.descendant(
+      of: find.byKey(const Key('identity-rule')),
+      matching: find.byType(ColoredBox),
+    ));
+    expect(bar.color, exampleProductAccent);
+    // The accent is clearly not the magenta spark.
+    expect(bar.color, isNot(PlinkColors.magenta));
+
+    // ...and introducing the accent did not blow the spark budget.
+    final ByteData rgba = await capture(tester, 9);
+    expect(magentaRatio(rgba), lessThan(0.05));
+  });
+
   testWidgets('gallery renders the brand: fonts, spark budget, no shadows',
       (tester) async {
     tester.view.physicalSize = const Size(900, 1500);

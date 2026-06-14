@@ -6,7 +6,18 @@
     Title="Plink Labs — WinUI binding">
 
     <Grid Background="{StaticResource PlinkPaperBrush}">
-        <ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- DS-5: the one per-product identity element — a thin top bar in the
+             app's own accent (PlinkProductAccentBrush, overridden in App.xaml).
+             magenta stays the spark; this never competes with it. -->
+        <Border x:Name="IdentityRule" Grid.Row="0" Height="2"
+                Background="{StaticResource PlinkProductAccentBrush}" />
+
+        <ScrollViewer Grid.Row="1">
             <StackPanel MaxWidth="760" HorizontalAlignment="Center" Spacing="24" Padding="40">
 
                 <!-- ── the full-bleed ink section (the agent's primary surface) ── -->

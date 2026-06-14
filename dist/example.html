@@ -90,6 +90,43 @@
     </div>
   </section>
 
+  <!-- ── per-product accent (DS-5) — an app layers its identity by overriding
+       ONE token: --product-accent. magenta stays the spark; the accent only
+       tints the app's own product mark + the one identity rule. ──────────── -->
+  <section class="wrap">
+    <p class="pl-eyebrow"><span class="pl-eyebrow__dot"></span>DS-5 · PER-PRODUCT ACCENT</p>
+
+    <div class="group" style="--product-accent:#2563EB">
+      <div class="pl-identity-rule" aria-hidden="true"></div>
+      <div class="glabel" style="margin-top:var(--space-3)">App “Anchor” — overrides --product-accent: #2563EB</div>
+      <div class="row">
+        <!-- the app's own product mark, tinted with the accent (currentColor) -->
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" style="color:var(--product-accent)">
+          <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="11" cy="11" r="2.5" fill="currentColor"/>
+        </svg>
+        <span style="font-family:var(--font-display);font-size:var(--text-xl)">Anchor</span>
+        <!-- the spark stays magenta even inside an accented app -->
+        <button class="pl-btn pl-btn--primary">Primary action</button>
+        <span class="pl-badge pl-badge--spark"><span class="pl-badge__dot"></span>Live</span>
+      </div>
+    </div>
+
+    <div class="group" style="--product-accent:#0F8A5F">
+      <div class="pl-identity-rule" aria-hidden="true"></div>
+      <div class="glabel" style="margin-top:var(--space-3)">App “Roster” — overrides --product-accent: #0F8A5F</div>
+      <div class="row">
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true" style="color:var(--product-accent)">
+          <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="11" cy="11" r="2.5" fill="currentColor"/>
+        </svg>
+        <span style="font-family:var(--font-display);font-size:var(--text-xl)">Roster</span>
+        <button class="pl-btn pl-btn--primary">Primary action</button>
+        <span class="pl-badge pl-badge--spark"><span class="pl-badge__dot"></span>Live</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ── on ink — drop `.plink-ink` on a container, children adapt ──────── -->
   <section class="plink-ink">
     <div class="wrap">

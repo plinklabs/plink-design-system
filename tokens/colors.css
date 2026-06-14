@@ -45,4 +45,15 @@
   --accent-press: var(--magenta-press);
 
   --focus-ring: var(--magenta);
+
+  /* ── per-product accent (the DS-5 extension point) ────────────
+     Plink Labs foundations + ONE per-product accent. An app layers
+     its own identity on top of the foundations by overriding this one
+     token (and supplying its own product mark) — see readme.md § "Per-
+     product accent". It is RESERVED for the app's product mark/lockup
+     and ONE thin identity element (e.g. the top identity rule below);
+     it must NEVER take over the magenta spark (primary action, ping,
+     focus ring, the one highlighted word). Defaults to ink so an app
+     that doesn't override it renders neutrally — never a second spark. */
+  --product-accent: var(--ink);
 }

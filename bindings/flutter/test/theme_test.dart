@@ -20,6 +20,27 @@ void main() {
           PlinkColors.magenta);
     });
 
+    test('ships the per-product accent slot with its neutral ink default', () {
+      final PlinkProductAccent? ext = theme.extension<PlinkProductAccent>();
+      expect(ext, isNotNull);
+      expect(ext!.accent, PlinkColors.productAccent);
+      // the default must be neutral ink, never a second spark.
+      expect(PlinkColors.productAccent, PlinkColors.ink);
+    });
+
+    test('an app overrides the accent without disturbing the magenta spark', () {
+      const Color appAccent = Color(0xFF2563EB);
+      final ThemeData themed = PlinkTheme.paper.copyWith(
+        extensions: const <ThemeExtension<dynamic>>[
+          PlinkProductAccent(appAccent),
+        ],
+      );
+      expect(themed.extension<PlinkProductAccent>()!.accent, appAccent);
+      // magenta stays the spark: primary + focus ring are untouched.
+      expect(themed.colorScheme.primary, PlinkColors.magenta);
+      expect(themed.focusColor, PlinkColors.magenta);
+    });
+
     test('no shadows anywhere — zero elevation, transparent shadow', () {
       expect(theme.shadowColor, Colors.transparent);
       expect(theme.cardTheme.elevation, 0);

@@ -88,6 +88,18 @@ internal static class SmokeCheck
         Brush("PlinkFocusRingBrush", PlinkColors.Magenta);
 
         log.AppendLine();
+        log.AppendLine("[per-product accent — DS-5]");
+        // The binding ships a neutral ink default in code...
+        if (PlinkColors.ProductAccent == PlinkColors.Ink)
+            Pass("PlinkColors.ProductAccent default = ink (neutral)");
+        else
+            Fail($"PlinkColors.ProductAccent expected ink but was {Hex(PlinkColors.ProductAccent)}");
+        // ...and the sample app overrides the slot in App.xaml, so the resolved
+        // brush must be the app's accent — proving the override path works
+        // end-to-end (a merged key, defined after the binding, wins).
+        Brush("PlinkProductAccentBrush", Color.FromArgb(0xFF, 0x25, 0x63, 0xEB));
+
+        log.AppendLine();
         log.AppendLine("[type styles]");
         Style("PlinkDisplayLargeTextStyle", typeof(Microsoft.UI.Xaml.Controls.TextBlock));
         Style("PlinkBodyTextStyle", typeof(Microsoft.UI.Xaml.Controls.TextBlock));

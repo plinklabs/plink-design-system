@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../tokens/colors.dart';
 import '../tokens/spacing.dart';
 import '../tokens/typography.dart';
+import 'product_accent.dart';
 
 /// Builds the Plink Labs [ThemeData] from the shared design tokens.
 ///
@@ -83,6 +84,9 @@ abstract final class PlinkTheme {
       useMaterial3: true,
       brightness: brightness,
       colorScheme: scheme,
+      // The per-product accent slot (DS-5) ships with its neutral default;
+      // an app overrides it via copyWith(extensions: [PlinkProductAccent(…)]).
+      extensions: const <ThemeExtension<dynamic>>[PlinkProductAccent()],
       scaffoldBackgroundColor: surface,
       canvasColor: surface,
       fontFamily: PlinkType.packaged(PlinkType.bodyFamily),
