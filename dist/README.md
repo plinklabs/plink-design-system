@@ -95,3 +95,29 @@ the full convention in the repo `readme.md` § "Per-product accent".
 `plink.css` is the vanilla mirror of `tokens/` + the `.pl-*` classes emitted by
 `components/`. If those change, update this file to match (the component blocks
 are copied 1:1 and labelled with their source).
+
+### The gate
+
+Because the stylesheet is hand-maintained, it has an automated gate — the
+vanilla counterpart of the Flutter (`flutter analyze`) and WinUI (`--smoke`)
+checks. From the repo root:
+
+```bash
+npm install      # once
+npm run verify   # stylelint + token-parity
+```
+
+`npm run verify` runs two checks:
+
+- **`lint:css`** — [stylelint](https://stylelint.io) over `dist/plink.css` and
+  `tokens/*.css`: valid syntax, no unknown properties/functions, no duplicate
+  custom properties (config in `.stylelintrc.json`).
+- **`check:tokens`** — [`scripts/check-token-parity.mjs`](../scripts/check-token-parity.mjs),
+  which asserts the `:root` custom properties in `dist/plink.css` match
+  `tokens/*.css` exactly: nothing missing, nothing stray, no value drift. This
+  is what catches the mirror falling behind a token change.
+
+CI runs the same `npm run verify` on every push/PR that touches these files
+(`.github/workflows/css-gate.yml`). The `.pl-*` component blocks are still kept
+in sync by hand against `components/` — the gate covers tokens + CSS validity,
+not 1:1 component parity.
