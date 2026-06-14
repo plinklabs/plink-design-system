@@ -197,6 +197,8 @@ Assets in `assets/`: `plink-mark.svg`, `plink-mark-dark.svg`, `plink-lockup-ligh
   (browser extensions) that can't load `_ds_bundle.js`. See `dist/README.md`.
 - `assets/` — marks, lockups (light/dark), ping-variations reference.
 - `guidelines/` — foundation specimen cards (Colors, Type, Spacing, Brand) for the Design System tab.
+- `CONSUMPTION.md` — how apps consume each binding (Flutter / WinUI / vanilla CSS), how the
+  bindings stay in lockstep with `tokens/`, and how to request a new shared component.
 - `readme.md` (this file) · `SKILL.md` (Agent-Skills compatible entry).
 
 **Components** (`window.PlinkLabsDesignSystem_59a0ef`)
