@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>$(PlinkTargetFramework)</TargetFramework>
+    <TargetPlatformMinVersion>$(PlinkTargetPlatformMinVersion)</TargetPlatformMinVersion>
+    <RootNamespace>PlinkDesignSystem.Sample</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimeIdentifiers>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <!-- Run as a plain .exe (no MSIX packaging) so the verify window and the
+         headless smoke check launch without an app package. -->
+    <WindowsPackageType>None</WindowsPackageType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="$(WindowsAppSdkVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PlinkDesignSystem\PlinkDesignSystem.csproj" />
+  </ItemGroup>
+
+</Project>

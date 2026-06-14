@@ -1,0 +1,22 @@
+<Project>
+  <!-- Shared config for every project in the Plink Labs WinUI binding.
+       One place to pin the Windows App SDK version and the target framework. -->
+  <PropertyGroup>
+    <!-- Windows App SDK 2.2 — the first stable line that supports .NET 10
+         (its XAML compiler understands the net10 reference assemblies). Bump
+         here and it flows to the library + sample together. -->
+    <WindowsAppSdkVersion>2.2.0</WindowsAppSdkVersion>
+
+    <!-- net10 + the 19041 Windows projection. Min version 17763 keeps the
+         binding usable down to Windows 10 1809, matching the agent's floor. -->
+    <PlinkTargetFramework>net10.0-windows10.0.19041.0</PlinkTargetFramework>
+    <PlinkTargetPlatformMinVersion>10.0.17763.0</PlinkTargetPlatformMinVersion>
+
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Hairlines, not shadows — and no shipped symbols/PDB noise in consumers. -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+</Project>

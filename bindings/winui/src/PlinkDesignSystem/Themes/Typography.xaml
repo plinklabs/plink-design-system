@@ -1,0 +1,131 @@
+<!--  Plink Labs — type, a translation of tokens/typography.css.
+
+      Display: Fraunces (warm, characterful) · Body: Hanken Grotesk ·
+      Labels / section numbers / captions / technical microcopy: Space Mono —
+      the "Labs" signature.
+
+      The three families are the DS-1 ttf fonts bundled with this library; the
+      FontFamily URIs resolve them out of ms-appx so they ship with any app.
+      Fraunces and Hanken are variable; WinUI selects the weight on the wght
+      axis through FontWeight. Sizes are in DIPs (≈ CSS px); LineHeight is the
+      CSS line-height × size; CharacterSpacing is the em tracking × 1000.  -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ── families ─────────────────────────────────────────────────── -->
+    <FontFamily x:Key="PlinkDisplayFontFamily">ms-appx:///PlinkDesignSystem/fonts/fraunces/Fraunces-Variable.ttf#Fraunces</FontFamily>
+    <FontFamily x:Key="PlinkBodyFontFamily">ms-appx:///PlinkDesignSystem/fonts/hanken-grotesk/HankenGrotesk-Variable.ttf#Hanken Grotesk</FontFamily>
+    <FontFamily x:Key="PlinkMonoFontFamily">ms-appx:///PlinkDesignSystem/fonts/space-mono/SpaceMono-Regular.ttf#Space Mono</FontFamily>
+
+    <!-- ── display scale (Fraunces, optical, tight, wght 300) ───────────
+         Fraunces' display weight matches the live brand (plinklabs.org renders
+         it at 300 = Light). Flush-left, never centered.  -->
+    <Style x:Key="PlinkDisplayLargeTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkDisplayFontFamily}" />
+        <Setter Property="FontSize" Value="86.4" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="LineHeight" Value="84.7" />
+        <Setter Property="CharacterSpacing" Value="-18" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkDisplayMediumTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkDisplayFontFamily}" />
+        <Setter Property="FontSize" Value="54.4" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="LineHeight" Value="55.5" />
+        <Setter Property="CharacterSpacing" Value="-18" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkDisplaySmallTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkDisplayFontFamily}" />
+        <Setter Property="FontSize" Value="38.4" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="LineHeight" Value="40.7" />
+        <Setter Property="CharacterSpacing" Value="-18" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <!-- ── body scale (Hanken Grotesk, 400 / 500 / 600) ─────────────────
+         16px is the floor (projector legibility). Lede 19px.  -->
+    <Style x:Key="PlinkTitleLargeTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkBodyFontFamily}" />
+        <Setter Property="FontSize" Value="19" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="LineHeight" Value="28.5" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkTitleMediumTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkBodyFontFamily}" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="LineHeight" Value="25.5" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkBodyLargeTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkBodyFontFamily}" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="25.5" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkBodyTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkBodyFontFamily}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="24" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="PlinkBodySmallTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkBodyFontFamily}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="21" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextMutedBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+
+    <!-- ── mono scale (Space Mono) — labels & microcopy ─────────────────
+         UPPERCASE + wide tracking for eyebrows (uppercase the text in markup —
+         XAML has no text-transform); sentence-case mono elsewhere.  -->
+    <Style x:Key="PlinkEyebrowTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkMonoFontFamily}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="CharacterSpacing" Value="140" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+    </Style>
+    <Style x:Key="PlinkLabelTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkMonoFontFamily}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="CharacterSpacing" Value="40" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+    </Style>
+    <Style x:Key="PlinkLabelStrongTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkMonoFontFamily}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="LineHeight" Value="16" />
+        <Setter Property="CharacterSpacing" Value="140" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextBrush}" />
+    </Style>
+    <Style x:Key="PlinkCaptionTextStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource PlinkMonoFontFamily}" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="LineHeight" Value="15" />
+        <Setter Property="CharacterSpacing" Value="140" />
+        <Setter Property="Foreground" Value="{StaticResource PlinkTextCaptionBrush}" />
+    </Style>
+
+</ResourceDictionary>

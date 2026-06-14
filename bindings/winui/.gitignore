@@ -1,0 +1,10 @@
+# .NET / WinUI build output
+bin/
+obj/
+*.user
+generated/
+AppPackages/
+BundleArtifacts/
+*.appx
+*.msix
+smoke-result.txt
