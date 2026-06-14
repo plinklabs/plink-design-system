@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Plink Labs — vanilla CSS binding demo / verify page.
+     Plain HTML + dist/plink.css only. No React, no _ds_bundle.js.
+     Exercises every shipped component on paper AND on `.plink-ink`. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plink Labs — vanilla CSS binding</title>
+<link rel="stylesheet" href="plink.css">
+<style>
+  /* page chrome only — not part of the binding */
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); }
+  .wrap{ max-width:var(--container); margin:0 auto; padding:var(--space-7) var(--gutter); }
+  .plink-ink .wrap{ padding-block:var(--space-8); }
+  h1{ font-family:var(--font-display); font-weight:var(--display-weight); font-optical-sizing:auto;
+      font-size:var(--display-2); line-height:var(--display-2-lh); letter-spacing:var(--display-tracking);
+      margin:var(--space-3) 0 var(--space-5); }
+  h1 .spark{ color:var(--magenta); }
+  .group{ margin-bottom:var(--space-6); }
+  .glabel{ font-family:var(--font-mono); font-size:var(--label); text-transform:uppercase;
+           letter-spacing:var(--label-tracking); color:var(--muted); margin-bottom:var(--space-3); }
+  .row{ display:flex; align-items:center; gap:var(--space-4); flex-wrap:wrap; }
+  .cards{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4); max-width:640px; }
+  .card-h{ font-family:var(--font-display); font-weight:var(--display-weight); font-optical-sizing:auto;
+           font-size:var(--text-xl); margin:0 0 var(--space-2); }
+  .card-b{ font-size:var(--text-sm); color:var(--ink-60); margin:0; line-height:1.45; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4); max-width:640px; }
+</style>
+</head>
+<body>
+
+  <!-- ── on paper ─────────────────────────────────────────────────────── -->
+  <section class="wrap">
+    <p class="pl-eyebrow"><span class="pl-eyebrow__dot"></span>VANILLA · REACT-FREE</p>
+    <h1>On-brand without <span class="spark">React</span>
+      <span class="pl-ping pl-ping--pulse" aria-hidden="true">
+        <span class="pl-ping__ring"></span><span class="pl-ping__ring b"></span><span class="pl-ping__core"></span>
+      </span>
+    </h1>
+
+    <div class="group">
+      <div class="glabel">Button — variants</div>
+      <div class="row">
+        <button class="pl-btn pl-btn--primary">Browse products →</button>
+        <button class="pl-btn pl-btn--secondary">View source</button>
+        <button class="pl-btn pl-btn--outline">Docs</button>
+        <button class="pl-btn pl-btn--ghost">★ Star</button>
+        <button class="pl-btn pl-btn--primary" disabled>Disabled</button>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="glabel">Badge — mono chips</div>
+      <div class="row">
+        <span class="pl-badge pl-badge--outline">GPL-3.0</span>
+        <span class="pl-badge pl-badge--spark"><span class="pl-badge__dot"></span>Live</span>
+        <span class="pl-badge pl-badge--ink">v2.4</span>
+        <span class="pl-badge pl-badge--accent">New</span>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="glabel">Card — flat + hairline</div>
+      <div class="cards">
+        <div class="pl-card"><span class="pl-card__num">01</span>
+          <h3 class="card-h">Timer</h3><p class="card-b">A big, calm classroom countdown. Works offline.</p></div>
+        <div class="pl-card pl-card--ink"><span class="pl-card__num">02</span>
+          <h3 class="card-h">Picker</h3><p class="card-b">The one full-bleed ink panel.</p></div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="glabel">Input — hairline + magenta focus</div>
+      <div class="field-row">
+        <label class="pl-field"><span class="pl-field__label">Name</span>
+          <input class="pl-input" type="text" placeholder="Your classroom"></label>
+        <label class="pl-field"><span class="pl-field__label">Email</span>
+          <input class="pl-input" type="email" placeholder="you@school.org"></label>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="glabel">Ping — static bullet · pulse</div>
+      <div class="row">
+        <span class="pl-ping pl-ping--static" aria-hidden="true"><span class="pl-ping__ring"></span><span class="pl-ping__core"></span></span>
+        <span class="pl-ping pl-ping--pulse" style="--pl-ping-size:44px" aria-hidden="true">
+          <span class="pl-ping__ring"></span><span class="pl-ping__ring b"></span><span class="pl-ping__core"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── on ink — drop `.plink-ink` on a container, children adapt ──────── -->
+  <section class="plink-ink">
+    <div class="wrap">
+      <p class="pl-eyebrow"><span class="pl-eyebrow__dot"></span>SAME MARKUP · ON INK</p>
+      <h1>Renders on <span class="spark">ink</span>
+        <span class="pl-ping pl-ping--pulse" aria-hidden="true">
+          <span class="pl-ping__ring"></span><span class="pl-ping__ring b"></span><span class="pl-ping__core"></span>
+        </span>
+      </h1>
+
+      <div class="group">
+        <div class="glabel">Button</div>
+        <div class="row">
+          <button class="pl-btn pl-btn--primary">Primary</button>
+          <button class="pl-btn pl-btn--secondary">Secondary</button>
+          <button class="pl-btn pl-btn--outline">Outline</button>
+          <button class="pl-btn pl-btn--ghost">★ Ghost</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="glabel">Badge</div>
+        <div class="row">
+          <span class="pl-badge pl-badge--outline">GPL-3.0</span>
+          <span class="pl-badge pl-badge--spark"><span class="pl-badge__dot"></span>Live</span>
+          <span class="pl-badge pl-badge--ink">v2.4</span>
+          <span class="pl-badge pl-badge--accent">New</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="glabel">Card · Input</div>
+        <div class="cards">
+          <div class="pl-card"><span class="pl-card__num">01</span>
+            <h3 class="card-h">Whiteboard</h3><p class="card-b">Flat ink surface, hairline border.</p></div>
+          <label class="pl-field"><span class="pl-field__label">Search</span>
+            <input class="pl-input" type="text" placeholder="Find a tool"></label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

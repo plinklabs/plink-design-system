@@ -25,5 +25,7 @@ Key files:
 - `components/` — React primitives (Button, Badge, Card, SpecStrip, Input, Switch, Checkbox, Logo,
   Eyebrow, Ping, PingDivider, ScopeRule, Tabs), reachable at `window.PlinkLabsDesignSystem_59a0ef`
   after loading `_ds_bundle.js`.
+- `dist/plink.css` — vanilla, React-free binding (tokens + `.pl-*` classes + `.plink-ink`) for
+  plain HTML/CSS/TS surfaces like browser extensions. Link it directly; no React needed.
 - `ui_kits/marketing/` — a full example homepage to copy patterns from.
 - `assets/` — marks, lockups (light/dark), ping reference.

@@ -126,6 +126,9 @@ Assets in `assets/`: `plink-mark.svg`, `plink-mark-dark.svg`, `plink-lockup-ligh
 **Root**
 - `styles.css` — global entry point (consumers link this one file). `@import` lines only.
 - `tokens/` — `fonts.css` (webfonts), `colors.css`, `typography.css`, `spacing.css` (+ radius/motion).
+- `dist/plink.css` — vanilla, React-free binding: tokens + plain `.pl-*` component classes +
+  the `.plink-ink` base class, in one self-contained file. For plain HTML/CSS/TS surfaces
+  (browser extensions) that can't load `_ds_bundle.js`. See `dist/README.md`.
 - `assets/` — marks, lockups (light/dark), ping-variations reference.
 - `guidelines/` — foundation specimen cards (Colors, Type, Spacing, Brand) for the Design System tab.
 - `readme.md` (this file) · `SKILL.md` (Agent-Skills compatible entry).
