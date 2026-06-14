@@ -3,7 +3,7 @@
 function Footer() {
   const { Logo } = window.PlinkLabsDesignSystem_59a0ef;
   const cols = [
-    { h: 'Products', items: ['Metronome', 'Tuner', 'Timer', 'Noise Meter', 'Picker', 'Sampler'] },
+    { h: 'Products', items: ['Timer', 'Picker', 'Planner', 'Attendance', 'Flashcards', 'Whiteboard'] },
     { h: 'Project', items: ['Mission', 'Roadmap', 'Changelog', 'Contribute'] },
     { h: 'Source', items: ['GitHub', 'Licence — GPL-3.0', 'Issues', 'Mirror'] },
   ];
@@ -12,7 +12,7 @@ function Footer() {
       <div className="mk-footer__top">
         <div className="mk-footer__brand">
           <Logo size={24} />
-          <p className="mk-footer__note">A sound lab for the classroom. Made by teachers, free for everyone.</p>
+          <p className="mk-footer__note">A lab for the classroom. Made by teachers, free for everyone.</p>
         </div>
         <div className="mk-footer__cols">
           {cols.map((c) => (

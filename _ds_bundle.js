@@ -828,7 +828,7 @@ function Footer() {
   } = window.PlinkLabsDesignSystem_59a0ef;
   const cols = [{
     h: 'Products',
-    items: ['Metronome', 'Tuner', 'Timer', 'Noise Meter', 'Picker', 'Sampler']
+    items: ['Timer', 'Picker', 'Planner', 'Attendance', 'Flashcards', 'Whiteboard']
   }, {
     h: 'Project',
     items: ['Mission', 'Roadmap', 'Changelog', 'Contribute']
@@ -847,7 +847,7 @@ function Footer() {
     size: 24
   }), /*#__PURE__*/React.createElement("p", {
     className: "mk-footer__note"
-  }, "A sound lab for the classroom. Made by teachers, free for everyone.")), /*#__PURE__*/React.createElement("div", {
+  }, "A lab for the classroom. Made by teachers, free for everyone.")), /*#__PURE__*/React.createElement("div", {
     className: "mk-footer__cols"
   }, cols.map(c => /*#__PURE__*/React.createElement("div", {
     className: "mk-footer__col",
@@ -950,7 +950,7 @@ function Mission() {
     className: "mk-mission__statement"
   }, "Software for school should be ", /*#__PURE__*/React.createElement("span", {
     className: "mk-spark-dark"
-  }, "quiet, honest, and free"), ". No ads in front of a child. No data sold. No login to use a metronome."), /*#__PURE__*/React.createElement("div", {
+  }, "quiet, honest, and free"), ". No ads in front of a child. No data sold. No login to use a timer."), /*#__PURE__*/React.createElement("div", {
     className: "mk-mission__cols"
   }, /*#__PURE__*/React.createElement("div", {
     className: "mk-mission__col"
@@ -1013,34 +1013,34 @@ try { (() => {
 
 const PL_PRODUCTS = [{
   num: '01',
-  name: 'Metronome',
-  tag: 'Rhythm',
-  desc: 'A precise, projector-legible metronome. Tap tempo, subdivisions, a visual ping on every beat.'
-}, {
-  num: '02',
-  name: 'Tuner',
-  tag: 'Pitch',
-  desc: 'Chromatic tuner with a calm needle. Works fully offline — no mic data ever leaves the room.'
-}, {
-  num: '03',
   name: 'Timer',
   tag: 'Classroom',
   desc: 'Big, readable countdowns for activities and transitions. Plinks gently when time is up.'
 }, {
-  num: '04',
-  name: 'Noise Meter',
-  tag: 'Room',
-  desc: 'A friendly volume gauge that pulses when the room gets loud. No recording, just a level.'
-}, {
-  num: '05',
+  num: '02',
   name: 'Picker',
   tag: 'Fairness',
   desc: 'Random name and group picker. Transparent shuffle, no repeats until everyone has had a turn.'
 }, {
+  num: '03',
+  name: 'Planner',
+  tag: 'Lessons',
+  desc: 'Lay out a lesson as simple timed blocks. Drag to reorder, run it as a calm checklist.'
+}, {
+  num: '04',
+  name: 'Attendance',
+  tag: 'Roll',
+  desc: 'A quiet roll call. Tap to mark present and export a clean register — nothing leaves the room.'
+}, {
+  num: '05',
+  name: 'Flashcards',
+  tag: 'Review',
+  desc: 'Spaced-repetition cards for quick review. Build your own decks, flip with a keypress.'
+}, {
   num: '06',
-  name: 'Sampler',
-  tag: 'Sound',
-  desc: 'A tiny pad of classroom sounds and cues. Map your own clips, trigger with a keypress.'
+  name: 'Whiteboard',
+  tag: 'Canvas',
+  desc: 'A plain, fast whiteboard. Hairline grid, one ink colour, no clutter — readable from the back row.'
 }];
 function ProductCard({
   p
@@ -1081,7 +1081,7 @@ function Products() {
     className: "mk-section-num"
   }, "02 / Products"), /*#__PURE__*/React.createElement("h2", {
     className: "mk-section-title"
-  }, "Six small instruments, ", /*#__PURE__*/React.createElement("span", {
+  }, "Six small tools, ", /*#__PURE__*/React.createElement("span", {
     className: "mk-spark"
   }, "one"), " lab."), /*#__PURE__*/React.createElement("p", {
     className: "mk-section-lede"

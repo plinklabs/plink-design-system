@@ -134,7 +134,7 @@ internal static class SmokeCheck
         // family. If the real face loaded, the width differs from the fallback;
         // if it silently fell back, the widths match. Mirrors the Flutter
         // binding's font-load assertion.
-        const string probe = "Sound that teaches 0123456789";
+        const string probe = "Built for the classroom 0123456789";
         var fallbackWidth = MeasureWidth(probe, new FontFamily("__plink_missing_font__"));
         foreach (var key in new[] { "PlinkDisplayFontFamily", "PlinkBodyFontFamily", "PlinkMonoFontFamily" })
         {

@@ -26,13 +26,13 @@ class _SampleScreen extends StatelessWidget {
             children: <Widget>[
               const Eyebrow('Open source — free for every classroom'),
               const SizedBox(height: PlinkSpacing.s4),
-              Text('Sound that\nteaches.', style: t.displayMedium),
+              Text('Built for\nthe classroom.', style: t.displayMedium),
               const SizedBox(height: PlinkSpacing.s5),
               SizedBox(
                 width: 360,
                 child: Text(
                   'Anchor turns any classroom projector into a calm, '
-                  'offline-first instrument. No accounts, no ads, no CDN.',
+                  'offline-first tool. No accounts, no ads, no CDN.',
                   style: t.bodyLarge,
                 ),
               ),

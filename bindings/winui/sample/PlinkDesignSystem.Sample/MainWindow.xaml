@@ -22,7 +22,7 @@
 
                         <TextBlock Style="{StaticResource PlinkDisplayMediumTextStyle}"
                                    Foreground="{StaticResource PlinkOnInkBrush}">
-                            <Run Text="Sound that " /><Run Text="teaches"
+                            <Run Text="Built for the " /><Run Text="classroom"
                                 Foreground="{StaticResource PlinkMagentaOnDarkBrush}" /><Run Text="." />
                         </TextBlock>
 
@@ -40,7 +40,7 @@
 
                 <!-- ── type ramp on paper ──────────────────────────────────── -->
                 <TextBlock Style="{StaticResource PlinkLabelStrongTextStyle}" Text="TYPE" />
-                <TextBlock Style="{StaticResource PlinkDisplaySmallTextStyle}" Text="Sound that teaches" />
+                <TextBlock Style="{StaticResource PlinkDisplaySmallTextStyle}" Text="Built for the classroom" />
                 <TextBlock Style="{StaticResource PlinkTitleLargeTextStyle}" Text="Title — Hanken Grotesk SemiBold" />
                 <TextBlock Style="{StaticResource PlinkBodyTextStyle}"
                            Text="Body — Hanken Grotesk. 16px is the floor for projector legibility; magenta stays a spark." />
@@ -64,10 +64,10 @@
                     <StackPanel Spacing="8">
                         <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
                             <pds:Ping Diameter="14" Mode="Static" />
-                            <TextBlock Style="{StaticResource PlinkTitleMediumTextStyle}" Text="Metronome" />
+                            <TextBlock Style="{StaticResource PlinkTitleMediumTextStyle}" Text="Timer" />
                         </StackPanel>
                         <TextBlock Style="{StaticResource PlinkBodyTextStyle}"
-                                   Text="A flat, calm pulse. One hairline border, six-pixel radius, no shadow — surfaces sit on the paper, they don't float." />
+                                   Text="A big, calm countdown. One hairline border, six-pixel radius, no shadow — surfaces sit on the paper, they don't float." />
                     </StackPanel>
                 </Border>
 

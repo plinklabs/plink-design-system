@@ -7,7 +7,7 @@ and the ping motif as the recurring device. One magenta spark per region; one fu
 ## Screens / regions
 - `Nav.jsx` — logo + links + a single ink "Browse products" button.
 - `Hero.jsx` — eyebrow, oversized headline with one magenta word + inline ping, lede, primary CTA + ghost star, faint open-ring watermark, oscilloscope rule, spec strip.
-- `Products.jsx` — the six classroom instruments as flat hairline cards with mono section numbers and a static-ping bullet.
+- `Products.jsx` — the six classroom tools as flat hairline cards with mono section numbers and a static-ping bullet.
 - `Mission.jsx` — the one full-bleed **ink** section: a Fraunces statement, three mono-numbered columns, a magenta CTA, an on-ink spec strip.
 - `Footer.jsx` — mono microcopy, hairline rules, link columns, the mark.
 
