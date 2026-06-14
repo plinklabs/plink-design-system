@@ -1,0 +1,82 @@
+<!--  Plink Labs — colour, a 1:1 translation of tokens/colors.css.
+
+      ink + paper do ~90% of the work. magenta is a SPARK, never a coat of
+      paint: the mark, one highlighted word, the pulse, one primary action.
+      Keep it under ~5% of the pixels on any screen.
+
+      Every token ships as both a Color (…Color) and a SolidColorBrush
+      (…Brush). The full ink / on-ink family is shipped explicitly — the first
+      consumer (the Anchor agent) composes a full-bleed ink section, so it
+      needs the on-ink brushes regardless of the app's requested theme.  -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- ── base ink + paper ─────────────────────────────────────────── -->
+    <Color x:Key="PlinkInkColor">#FF1B1B23</Color>
+    <!-- near-black, warm -->
+    <Color x:Key="PlinkPaperColor">#FFFAF7F2</Color>
+    <!-- warm calm paper -->
+    <Color x:Key="PlinkPaper2Color">#FFF3EFE7</Color>
+    <!-- slightly deeper paper (the rare raised surface — flat, never shadowed) -->
+    <Color x:Key="PlinkPaper3Color">#FFECE7DC</Color>
+    <!-- deepest paper / inset -->
+
+    <!-- ink tints (text + hairlines, all derived from ink) -->
+    <Color x:Key="PlinkInk80Color">#FF3A3A42</Color>
+    <Color x:Key="PlinkInk60Color">#FF6E6A62</Color>
+    <!-- body-muted text on paper -->
+    <Color x:Key="PlinkMutedColor">#FF9A958B</Color>
+    <!-- captions, labels, disabled -->
+    <Color x:Key="PlinkHairlineColor">#241B1B23</Color>
+    <!-- rgba(27,27,35,0.14) — 1px instrument rules -->
+    <Color x:Key="PlinkHairlineStrongColor">#421B1B23</Color>
+    <!-- rgba(27,27,35,0.26) -->
+
+    <!-- ── the spark ────────────────────────────────────────────────── -->
+    <Color x:Key="PlinkMagentaColor">#FFDB2777</Color>
+    <!-- on light -->
+    <Color x:Key="PlinkMagentaPressColor">#FFC01F68</Color>
+    <!-- pressed / hover-darken -->
+    <Color x:Key="PlinkMagentaOnDarkColor">#FFEC4899</Color>
+    <!-- on the full-bleed ink section -->
+
+    <!-- ── on-ink (the one full-bleed ink section per page) ─────────── -->
+    <Color x:Key="PlinkOnInkColor">#FFFAF7F2</Color>
+    <!-- paper-coloured text on ink -->
+    <Color x:Key="PlinkOnInkMutedColor">#FF8E8A82</Color>
+    <Color x:Key="PlinkHairlineOnInkColor">#29FAF7F2</Color>
+    <!-- rgba(250,247,242,0.16) -->
+
+    <!-- ── brushes ──────────────────────────────────────────────────── -->
+    <SolidColorBrush x:Key="PlinkInkBrush" Color="{StaticResource PlinkInkColor}" />
+    <SolidColorBrush x:Key="PlinkPaperBrush" Color="{StaticResource PlinkPaperColor}" />
+    <SolidColorBrush x:Key="PlinkPaper2Brush" Color="{StaticResource PlinkPaper2Color}" />
+    <SolidColorBrush x:Key="PlinkPaper3Brush" Color="{StaticResource PlinkPaper3Color}" />
+    <SolidColorBrush x:Key="PlinkInk80Brush" Color="{StaticResource PlinkInk80Color}" />
+    <SolidColorBrush x:Key="PlinkInk60Brush" Color="{StaticResource PlinkInk60Color}" />
+    <SolidColorBrush x:Key="PlinkMutedBrush" Color="{StaticResource PlinkMutedColor}" />
+    <SolidColorBrush x:Key="PlinkHairlineBrush" Color="{StaticResource PlinkHairlineColor}" />
+    <SolidColorBrush x:Key="PlinkHairlineStrongBrush" Color="{StaticResource PlinkHairlineStrongColor}" />
+    <SolidColorBrush x:Key="PlinkMagentaBrush" Color="{StaticResource PlinkMagentaColor}" />
+    <SolidColorBrush x:Key="PlinkMagentaPressBrush" Color="{StaticResource PlinkMagentaPressColor}" />
+    <SolidColorBrush x:Key="PlinkMagentaOnDarkBrush" Color="{StaticResource PlinkMagentaOnDarkColor}" />
+    <SolidColorBrush x:Key="PlinkOnInkBrush" Color="{StaticResource PlinkOnInkColor}" />
+    <SolidColorBrush x:Key="PlinkOnInkMutedBrush" Color="{StaticResource PlinkOnInkMutedColor}" />
+    <SolidColorBrush x:Key="PlinkHairlineOnInkBrush" Color="{StaticResource PlinkHairlineOnInkColor}" />
+
+    <!-- ── semantic aliases (mirror the surface / text / accent set) ─ -->
+    <SolidColorBrush x:Key="PlinkSurfaceBrush" Color="{StaticResource PlinkPaperColor}" />
+    <SolidColorBrush x:Key="PlinkSurfaceRaisedBrush" Color="{StaticResource PlinkPaper2Color}" />
+    <SolidColorBrush x:Key="PlinkSurfaceInsetBrush" Color="{StaticResource PlinkPaper3Color}" />
+    <SolidColorBrush x:Key="PlinkSurfaceInkBrush" Color="{StaticResource PlinkInkColor}" />
+    <SolidColorBrush x:Key="PlinkTextBrush" Color="{StaticResource PlinkInkColor}" />
+    <SolidColorBrush x:Key="PlinkTextMutedBrush" Color="{StaticResource PlinkInk60Color}" />
+    <SolidColorBrush x:Key="PlinkTextCaptionBrush" Color="{StaticResource PlinkMutedColor}" />
+    <SolidColorBrush x:Key="PlinkBorderBrush" Color="{StaticResource PlinkHairlineColor}" />
+    <SolidColorBrush x:Key="PlinkBorderStrongBrush" Color="{StaticResource PlinkHairlineStrongColor}" />
+    <SolidColorBrush x:Key="PlinkAccentBrush" Color="{StaticResource PlinkMagentaColor}" />
+    <SolidColorBrush x:Key="PlinkAccentPressBrush" Color="{StaticResource PlinkMagentaPressColor}" />
+    <SolidColorBrush x:Key="PlinkFocusRingBrush" Color="{StaticResource PlinkMagentaColor}" />
+
+</ResourceDictionary>

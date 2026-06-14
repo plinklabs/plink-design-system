@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(PlinkTargetFramework)</TargetFramework>
+    <TargetPlatformMinVersion>$(PlinkTargetPlatformMinVersion)</TargetPlatformMinVersion>
+    <RootNamespace>PlinkDesignSystem</RootNamespace>
+    <AssemblyName>PlinkDesignSystem</AssemblyName>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <!-- A reusable resource library, not an app: no entry point / app.xaml. -->
+    <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="$(WindowsAppSdkVersion)" />
+  </ItemGroup>
+
+  <!-- Bundle the DS-1 ttf fonts. They live at the binding root (bindings/winui/fonts,
+       the same files the Flutter binding ships) and are linked in here so they pack
+       under ms-appx:///PlinkDesignSystem/fonts/... for the FontFamily URIs. -->
+  <ItemGroup>
+    <Content Include="..\..\fonts\**\*.ttf">
+      <Link>fonts\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

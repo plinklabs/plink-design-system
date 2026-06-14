@@ -1,0 +1,24 @@
+<!--  Plink Labs design system — the single ResourceDictionary a WinUI app
+      merges to get the whole binding (colours, type, control styles).
+
+          <Application.Resources>
+            <ResourceDictionary>
+              <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/PlinkResources.xaml" />
+              </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+          </Application.Resources>
+
+      Order matters: Colors first (Typography and Controls reference the colour
+      brushes via StaticResource).  -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/Themes/Colors.xaml" />
+        <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/Themes/Typography.xaml" />
+        <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/Themes/Controls.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>
