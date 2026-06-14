@@ -100,6 +100,72 @@ If photography is ever used, keep it warm and plain. No stock-photo gradients or
 
 ---
 
+## PER-PRODUCT ACCENT — how an app layers its identity
+
+Plink Labs apps share these foundations, but each product carries its own
+identity. The convention is deliberately narrow: **Plink Labs foundations + ONE
+per-product accent.** An app layers its identity by doing exactly two things —
+supplying **its own product mark/lockup**, and overriding **one reserved accent
+token**. Anchor is the first product to use it.
+
+**The one rule:** the product accent must **never** touch or compete with the
+magenta spark. Magenta stays the single in-app spark — the one highlighted word,
+the ping, the focus ring, and the one primary action — exactly as in VISUAL
+FOUNDATIONS. The product accent is **reserved** for just two things:
+
+1. the app's own **product mark / lockup**, and
+2. **one** thin **identity element** — a hairline-weight top *identity rule*
+   (`.pl-identity-rule` / `PlinkIdentityRule`), typically pinned to the top of
+   the app shell or window chrome.
+
+Nothing else reacts to it. If the product accent starts coloring buttons,
+badges, links, or pings, it has become a second spark — which is wrong. Pick one
+accent that is clearly **not** magenta. The slot defaults to **ink**, so an app
+that doesn't override it renders neutrally rather than as a second spark.
+
+**Where the mark/lockup live:** the *Plink Labs* marks/lockups are in `assets/`
+(`plink-mark.svg`, `plink-lockup-light.svg`, …). A **product's own** mark is
+owned by that app, not this repo — it lives in the app and is tinted with the
+product accent (e.g. `fill`/`color: var(--product-accent)`).
+
+**The token slot, per binding:**
+
+- **CSS / vanilla (DS-4)** — token `--product-accent` (declared in
+  `tokens/colors.css` and `dist/plink.css`, default `var(--ink)`). Override it on
+  any scope:
+  ```css
+  .app-root { --product-accent: #2563EB; }   /* Anchor blue */
+  ```
+  Use it via the `.pl-identity-rule` element and on your product mark. See
+  `dist/example.html` for two apps overriding it while magenta stays the spark.
+
+- **Flutter (DS-2)** — the `PlinkProductAccent` `ThemeExtension` (default
+  `PlinkColors.productAccent` = ink). Override once at the theme root:
+  ```dart
+  theme: PlinkTheme.paper.copyWith(
+    extensions: const [PlinkProductAccent(Color(0xFF2563EB))],
+  ),
+  ```
+  Read it with `PlinkProductAccent.of(context).accent`; render the identity rule
+  with `PlinkIdentityRule()`.
+
+- **WinUI (DS-3)** — the `PlinkProductAccentColor` / `PlinkProductAccentBrush`
+  resources (default ink; `PlinkColors.ProductAccent` in code). Override by
+  redefining the keys **after** the binding's merge, in `App.xaml`:
+  ```xml
+  <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+      <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/PlinkResources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Color x:Key="PlinkProductAccentColor">#FF2563EB</Color>
+    <SolidColorBrush x:Key="PlinkProductAccentBrush" Color="{StaticResource PlinkProductAccentColor}" />
+  </ResourceDictionary>
+  ```
+  Use `{StaticResource PlinkProductAccentBrush}` on a 2px top `Border` and your
+  product mark. See the sample.
+
+---
+
 ## ICONOGRAPHY
 
 Plink Labs is **deliberately icon-light**. The system leans on one proprietary device and a few

@@ -10,6 +10,13 @@
                 <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
                 <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/PlinkResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- DS-5: this app layers its own identity on the foundations by
+                 overriding the one per-product accent slot. Keys defined here,
+                 after the merge, win over the binding's neutral default. The
+                 magenta spark is untouched. -->
+            <Color x:Key="PlinkProductAccentColor">#FF2563EB</Color>
+            <SolidColorBrush x:Key="PlinkProductAccentBrush" Color="{StaticResource PlinkProductAccentColor}" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

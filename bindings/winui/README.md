@@ -69,6 +69,33 @@ dictionary in `App.xaml`:
 
 (`xmlns:pds="using:PlinkDesignSystem.Controls"` for `Ping`.)
 
+### Per-product accent (DS-5)
+
+Layer this app's identity by overriding **one** slot — `PlinkProductAccentColor`
+/ `PlinkProductAccentBrush` (default ink) — and supplying your own product mark.
+Magenta stays the spark; the accent is reserved for the mark and one thin top
+identity rule. Redefine the keys **after** the binding's merge in `App.xaml`:
+
+```xml
+<ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+        <ResourceDictionary Source="ms-appx:///PlinkDesignSystem/PlinkResources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Color x:Key="PlinkProductAccentColor">#FF2563EB</Color>   <!-- clearly NOT magenta -->
+    <SolidColorBrush x:Key="PlinkProductAccentBrush" Color="{StaticResource PlinkProductAccentColor}" />
+</ResourceDictionary>
+```
+
+```xml
+<!-- the one identity rule, pinned to the top of the shell -->
+<Border Height="2" Background="{StaticResource PlinkProductAccentBrush}" />
+```
+
+The [sample](sample/PlinkDesignSystem.Sample) overrides it (Anchor blue) and the
+smoke check asserts the override resolved. See the repo `readme.md` § "Per-product
+accent" for the full convention.
+
 ## Develop & verify
 
 Requires the **.NET 10 SDK** and **Windows App SDK 2.2** (restored from NuGet;

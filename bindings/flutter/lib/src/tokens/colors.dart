@@ -52,4 +52,15 @@ abstract final class PlinkColors {
   /// muted text on ink.
   static const Color onInkMuted = Color(0xFF8E8A82);
   static const Color hairlineOnInk = Color(0x29FAF7F2); // rgba(250,247,242,0.16)
+
+  // ── per-product accent (the DS-5 extension point) ─────────────────
+  /// Default for the per-product accent slot — the neutral fallback an app
+  /// gets until it overrides it. Plink Labs foundations + ONE per-product
+  /// accent: an app layers its own identity by supplying its product mark and
+  /// a single reserved accent colour via the [PlinkProductAccent] theme
+  /// extension. The accent is reserved for that mark/lockup and one thin
+  /// identity element ([PlinkIdentityRule]) — it must NEVER take over the
+  /// magenta spark (primary action, ping, focus ring). Defaults to [ink] so an
+  /// app that doesn't override it renders neutrally, never as a second spark.
+  static const Color productAccent = ink;
 }

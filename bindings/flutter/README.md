@@ -11,7 +11,10 @@ dashboard — don't each re-implement the theme.
 - **`PlinkTheme.ink`** — the dark / full-bleed-ink theme.
 - **Tokens** — `PlinkColors`, `PlinkType`, `PlinkSpacing`, `PlinkRadius`,
   `PlinkBorders`, `PlinkMotion`.
-- **Brand widgets** — `Ping`, `ScopeRule`, `Eyebrow`, `PlinkBadge`.
+- **Brand widgets** — `Ping`, `ScopeRule`, `Eyebrow`, `PlinkBadge`,
+  `PlinkIdentityRule`.
+- **Per-product accent** — `PlinkProductAccent` (a `ThemeExtension`), the DS-5
+  per-app identity slot (see below).
 
 Both themes enforce the house rules: **1px hairline borders**, **6px radius**,
 **zero elevation / no shadows**, and magenta reserved as the focus / spark
@@ -63,6 +66,26 @@ const Ping(size: 14, mode: PingMode.static); // quiet ring bullet
 
 `Ping` respects the platform "reduce motion" setting; all four widgets take an
 `onInk` flag to recolour for the dark section.
+
+### Per-product accent (DS-5)
+
+Layer this app's identity on the foundations by overriding the one accent slot —
+magenta stays the spark. The accent is reserved for your product mark and the one
+`PlinkIdentityRule`; it defaults to ink.
+
+```dart
+MaterialApp(
+  theme: PlinkTheme.paper.copyWith(
+    extensions: const [PlinkProductAccent(Color(0xFF2563EB))], // clearly NOT magenta
+  ),
+  home: const HomeScreen(),
+);
+
+// read it anywhere:  PlinkProductAccent.of(context).accent
+const PlinkIdentityRule();   // thin top bar in the product accent
+```
+
+See the repo `readme.md` § "Per-product accent" for the full convention.
 
 ## Develop
 

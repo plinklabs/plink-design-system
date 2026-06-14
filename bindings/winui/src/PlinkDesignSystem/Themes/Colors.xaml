@@ -48,6 +48,19 @@
     <Color x:Key="PlinkHairlineOnInkColor">#29FAF7F2</Color>
     <!-- rgba(250,247,242,0.16) -->
 
+    <!-- ── per-product accent (the DS-5 extension point) ────────────────
+         Plink Labs foundations + ONE per-product accent. An app layers its own
+         identity by overriding this one key (and supplying its own product
+         mark) — merge a ResourceDictionary AFTER PlinkResources.xaml that
+         redefines PlinkProductAccentColor / PlinkProductAccentBrush. Reserved
+         for the app's product mark/lockup and ONE thin identity element (a
+         top identity rule — see the sample); it must NEVER take over the
+         magenta spark (primary action, ping, focus ring). Defaults to ink so
+         an app that doesn't override it renders neutrally. -->
+    <Color x:Key="PlinkProductAccentColor">#FF1B1B23</Color>
+    <!-- = ink, the neutral default -->
+    <SolidColorBrush x:Key="PlinkProductAccentBrush" Color="{StaticResource PlinkProductAccentColor}" />
+
     <!-- ── brushes ──────────────────────────────────────────────────── -->
     <SolidColorBrush x:Key="PlinkInkBrush" Color="{StaticResource PlinkInkColor}" />
     <SolidColorBrush x:Key="PlinkPaperBrush" Color="{StaticResource PlinkPaperColor}" />

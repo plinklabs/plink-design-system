@@ -94,6 +94,14 @@
   --accent-press: var(--magenta-press);
   --focus-ring: var(--magenta);
 
+  /* per-product accent (DS-5): foundations + ONE per-app accent. An app
+     overrides this one token (and supplies its own product mark) to layer
+     its identity on top. Reserved for the product mark/lockup and ONE thin
+     identity element (.pl-identity-rule) — it must NEVER become a second
+     spark (primary action, ping, focus ring stay magenta). Defaults to ink
+     so an un-overridden app renders neutrally. See readme.md / dist/README. */
+  --product-accent: var(--ink);
+
   /* ── type ── */
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
@@ -310,6 +318,23 @@ textarea.pl-input{ resize: vertical; min-height: 5rem; line-height: var(--body-l
 .pl-eyebrow__dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--magenta); flex: none; }
 .pl-eyebrow--on-ink{ color: var(--on-ink); }
 .pl-eyebrow--on-ink .pl-eyebrow__dot{ background: var(--magenta-on-dark); }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Identity rule — the one per-product identity element (DS-5)
+   A thin horizontal bar in the per-product accent, for an app to mark its own
+   surface (typically pinned to the very top of the app shell / window chrome).
+   Besides the app's own product mark/lockup, this is the ONLY element the
+   product accent is allowed to colour — it is not a divider and not a spark.
+   Set the colour per app by overriding `--product-accent` (see :root); it
+   defaults to ink, so without an override it reads as a plain ink hairline-bar.
+   Markup:  <div class="pl-identity-rule" aria-hidden="true"></div>
+   ────────────────────────────────────────────────────────────────────────── */
+.pl-identity-rule{
+  height: 2px;
+  width: 100%;
+  background: var(--product-accent);
+  border: 0;
+}
 
 /* ──────────────────────────────────────────────────────────────────────────
    Ping — the signature concentric-ring pulse  (mirrors components/brand/Ping.jsx)

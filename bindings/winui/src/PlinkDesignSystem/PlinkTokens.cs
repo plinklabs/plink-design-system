@@ -49,6 +49,16 @@ public static class PlinkColors
 
     /// <summary>rgba(250,247,242,0.16).</summary>
     public static readonly Color HairlineOnInk = Argb(0x29, 0xFA, 0xF7, 0xF2);
+
+    /// <summary>
+    /// Neutral default for the per-product accent slot (DS-5). Plink Labs
+    /// foundations + ONE per-product accent: an app layers its own identity by
+    /// overriding the <c>PlinkProductAccentColor</c> / <c>PlinkProductAccentBrush</c>
+    /// resources (and supplying its own product mark). Reserved for that
+    /// mark/lockup and one thin identity element — never the magenta spark.
+    /// Defaults to <see cref="Ink"/> so an un-overridden app renders neutrally.
+    /// </summary>
+    public static readonly Color ProductAccent = Ink;
 }
 
 /// <summary>

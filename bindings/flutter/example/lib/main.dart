@@ -3,6 +3,11 @@ import 'package:plink_design_system/plink_design_system.dart';
 
 void main() => runApp(const PlinkGalleryApp());
 
+/// The example app's own per-product accent (DS-5). A real app picks one
+/// colour that is clearly NOT the magenta spark and layers it on the
+/// foundations via the [PlinkProductAccent] theme extension below.
+const Color exampleProductAccent = Color(0xFF2563EB); // "Anchor" blue
+
 /// A gallery exercising the *whole* Plink Labs Flutter binding: the type ramp,
 /// every themed Material component, and the four brand widgets. The app-bar
 /// switch flips the entire gallery between the paper (light) and ink (dark)
@@ -22,7 +27,13 @@ class _PlinkGalleryAppState extends State<PlinkGalleryApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Plink Design System',
-      theme: _ink ? PlinkTheme.ink : PlinkTheme.paper,
+      // Layer this app's identity on the foundations: override the one
+      // per-product accent slot (DS-5). magenta stays the spark everywhere.
+      theme: (_ink ? PlinkTheme.ink : PlinkTheme.paper).copyWith(
+        extensions: const <ThemeExtension<dynamic>>[
+          PlinkProductAccent(exampleProductAccent),
+        ],
+      ),
       home: _Gallery(ink: _ink, onToggle: () => setState(() => _ink = !_ink)),
     );
   }
@@ -56,6 +67,11 @@ class _Gallery extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
                 horizontal: PlinkSpacing.s6, vertical: PlinkSpacing.s6),
             children: <Widget>[
+              // ── per-product identity rule (DS-5): a thin bar in the app's
+              // own accent, pinned to the top of the shell. ───────────────
+              const PlinkIdentityRule(key: Key('identity-rule')),
+              const SizedBox(height: PlinkSpacing.s5),
+
               // ── Hero ──────────────────────────────────────────────
               Eyebrow('Open source — free for every classroom', onInk: ink),
               const SizedBox(height: PlinkSpacing.s4),
