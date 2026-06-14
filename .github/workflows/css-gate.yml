@@ -1,0 +1,38 @@
+name: CSS gate
+
+# Automated gate for the vanilla CSS binding (dist/plink.css). Mirrors the
+# Flutter (`flutter analyze` + tests) and WinUI (`--smoke`) gates: lints the
+# stylesheet and asserts dist/plink.css stays in sync with tokens/*.css.
+# See dist/README.md § "Keeping in sync".
+
+on:
+  push:
+    paths:
+      - 'dist/plink.css'
+      - 'tokens/**'
+      - 'scripts/check-token-parity.mjs'
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/css-gate.yml'
+  pull_request:
+    paths:
+      - 'dist/plink.css'
+      - 'tokens/**'
+      - 'scripts/check-token-parity.mjs'
+      - '.stylelintrc.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/css-gate.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
