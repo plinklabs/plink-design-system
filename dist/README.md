@@ -7,6 +7,10 @@ component classes that render identically to the React layer.
 
 The React `_ds_bundle.js` is unchanged and remains the path for marketing sites.
 
+For the cross-binding picture — how this vanilla mirror, the Flutter binding, and
+the WinUI binding all stay in lockstep with `tokens/`, and how to request a new
+shared component — see the repo [`CONSUMPTION.md`](../CONSUMPTION.md).
+
 ## Use
 
 ```html

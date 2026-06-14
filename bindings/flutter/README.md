@@ -27,7 +27,9 @@ automatically with any app that depends on it.
 ## Use it
 
 Consume via a git or path dependency (this package is **not** published to
-pub.dev):
+pub.dev). For the cross-binding picture — how all three bindings stay in lockstep
+with `tokens/`, and how to request a new shared component — see the repo
+[`CONSUMPTION.md`](../../CONSUMPTION.md).
 
 ```yaml
 dependencies:

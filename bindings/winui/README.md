@@ -39,7 +39,9 @@ The binding enforces the house rules: **1px hairline borders**, **6px radius**,
 
 Consume via **git submodule / shared project** (this is not published to NuGet).
 Add the library project to your solution and reference it, then merge the
-dictionary in `App.xaml`:
+dictionary in `App.xaml`. For the cross-binding picture — how all three bindings
+stay in lockstep with `tokens/`, and how to request a new shared component — see
+the repo [`CONSUMPTION.md`](../../CONSUMPTION.md):
 
 ```xml
 <Application.Resources>
