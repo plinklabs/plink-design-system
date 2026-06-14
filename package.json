@@ -1,0 +1,16 @@
+{
+  "name": "plink-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Plink Labs design system — tooling for the vanilla CSS binding (dist/plink.css).",
+  "license": "GPL-3.0",
+  "scripts": {
+    "lint:css": "stylelint \"dist/plink.css\" \"tokens/*.css\"",
+    "check:tokens": "node scripts/check-token-parity.mjs",
+    "verify": "npm run lint:css && npm run check:tokens"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.15",
+    "stylelint": "^17.13.0"
+  }
+}
