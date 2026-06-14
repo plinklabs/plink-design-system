@@ -6,7 +6,7 @@ user-invocable: true
 
 Read the README.md file within this skill, and explore the other available files.
 
-Plink Labs is a sound lab for the classroom — free, open-source classroom instruments. The aesthetic
+Plink Labs is a lab for the classroom — free, open-source classroom tools. The aesthetic
 is editorial precision meets a playful instrument panel: warm paper, confident ink, magenta only as a
 spark (<5% of pixels), Fraunces display + Hanken Grotesk body + Space Mono labels, hairline borders
 (never shadows), and the open-ring "ping" motif as the recurring device.

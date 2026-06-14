@@ -44,9 +44,9 @@
       const { Logo, Eyebrow, Button, Card, Badge, Ping, PingDivider, ScopeRule, SpecStrip } = NS;
 
       const products = [
-        { num: '01', name: 'Metronome', tag: 'Rhythm', desc: 'A precise, projector-legible metronome with a visual ping on every beat.' },
-        { num: '02', name: 'Tuner', tag: 'Pitch', desc: 'Chromatic tuner with a calm needle. Fully offline — no mic data leaves the room.' },
-        { num: '03', name: 'Timer', tag: 'Classroom', desc: 'Big, readable countdowns. Plinks gently when time is up.' },
+        { num: '01', name: 'Timer', tag: 'Classroom', desc: 'Big, readable countdowns for activities and transitions. Plinks gently when time is up.' },
+        { num: '02', name: 'Picker', tag: 'Fairness', desc: 'Random name and group picker. Transparent shuffle, no repeats until everyone has had a turn.' },
+        { num: '03', name: 'Planner', tag: 'Lessons', desc: 'Lay out a lesson as simple timed blocks. Drag to reorder, run it as a calm checklist.' },
       ];
 
       function App() {
@@ -74,7 +74,7 @@
               <div className="divider"><PingDivider position={0.36} /></div>
               <section>
                 <span className="secnum">02 / Products</span>
-                <h2 className="sectitle">Small instruments, <span className="spark">one</span> lab.</h2>
+                <h2 className="sectitle">Small tools, <span className="spark">one</span> lab.</h2>
                 <div className="grid">
                   {products.map((p) => (
                     <Card key={p.num} num={p.num} interactive>

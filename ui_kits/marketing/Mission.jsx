@@ -8,7 +8,7 @@ function Mission() {
         <Eyebrow onInk>03 / Mission</Eyebrow>
         <p className="mk-mission__statement">
           Software for school should be <span className="mk-spark-dark">quiet, honest, and free</span>.
-          No ads in front of a child. No data sold. No login to use a metronome.
+          No ads in front of a child. No data sold. No login to use a timer.
         </p>
         <div className="mk-mission__cols">
           <div className="mk-mission__col">

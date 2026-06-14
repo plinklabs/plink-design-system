@@ -53,7 +53,7 @@ void main() {
   double widthOf(String family) {
     final TextPainter tp = TextPainter(
       text: TextSpan(
-        text: 'Sound that teaches 0123456789',
+        text: 'Built for the classroom 0123456789',
         style: TextStyle(fontFamily: family, fontSize: 48),
       ),
       textDirection: TextDirection.ltr,
@@ -95,14 +95,14 @@ void main() {
 
     // The brand surfaces are on screen.
     expect(find.text('OPEN SOURCE — FREE FOR EVERY CLASSROOM'), findsOneWidget);
-    expect(find.text('Sound that\nteaches.'), findsOneWidget);
+    expect(find.text('Built for\nthe classroom.'), findsOneWidget);
     expect(find.byType(Ping), findsNWidgets(2));
     expect(find.byType(ScopeRule), findsWidgets);
 
     // The display headline must resolve to the bundled Fraunces font (not a
     // fallback) — this is what was missing when nothing "looked like the
     // design".
-    final Element headlineEl = tester.element(find.text('Sound that\nteaches.'));
+    final Element headlineEl = tester.element(find.text('Built for\nthe classroom.'));
     final Text headline = headlineEl.widget as Text;
     final TextStyle effective =
         DefaultTextStyle.of(headlineEl).style.merge(headline.style);

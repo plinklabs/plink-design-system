@@ -58,7 +58,7 @@ dictionary in `App.xaml`:
     <StackPanel Spacing="20">
         <TextBlock Style="{StaticResource PlinkDisplayMediumTextStyle}"
                    Foreground="{StaticResource PlinkOnInkBrush}">
-            <Run Text="Sound that " /><Run Text="teaches"
+            <Run Text="Built for the " /><Run Text="classroom"
                 Foreground="{StaticResource PlinkMagentaOnDarkBrush}" /><Run Text="." />
         </TextBlock>
         <Button Style="{StaticResource PlinkPrimaryButtonStyle}" Content="START" />

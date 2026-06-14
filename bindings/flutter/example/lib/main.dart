@@ -59,11 +59,11 @@ class _Gallery extends StatelessWidget {
               // ── Hero ──────────────────────────────────────────────
               Eyebrow('Open source — free for every classroom', onInk: ink),
               const SizedBox(height: PlinkSpacing.s4),
-              Text('Sound that\nteaches.', style: t.displayMedium),
+              Text('Built for\nthe classroom.', style: t.displayMedium),
               const SizedBox(height: PlinkSpacing.s5),
               Text(
                 'Anchor turns any classroom projector into a calm, '
-                'offline-first instrument. No accounts, no ads, no CDN.',
+                'offline-first tool. No accounts, no ads, no CDN.',
                 style: t.bodyLarge,
               ),
 
@@ -170,7 +170,7 @@ class _TypeRamp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(name.toUpperCase(), style: t.labelSmall),
-                Text('Sound that teaches',
+                Text('Built for the classroom',
                     style: style, maxLines: 1, overflow: TextOverflow.ellipsis),
               ],
             ),
@@ -238,7 +238,7 @@ class _InputsState extends State<_Inputs> {
                 Checkbox(
                     value: _checked,
                     onChanged: (v) => setState(() => _checked = v ?? false)),
-                const Text('Keep playing offline'),
+                const Text('Keep working offline'),
                 const Spacer(),
                 Switch(
                     value: _switched,
@@ -260,8 +260,8 @@ class _Tabs extends StatelessWidget {
       length: 3,
       child: TabBar(
         tabs: <Widget>[
-          Tab(text: 'Play'),
-          Tab(text: 'Library'),
+          Tab(text: 'Today'),
+          Tab(text: 'Lessons'),
           Tab(text: 'Settings'),
         ],
       ),
@@ -283,14 +283,14 @@ class _SampleCard extends StatelessWidget {
           children: <Widget>[
             Row(
               children: <Widget>[
-                Text('Metronome', style: t.titleMedium),
+                Text('Timer', style: t.titleMedium),
                 const Spacer(),
-                const PlinkBadge('120 BPM', variant: BadgeVariant.spark),
+                const PlinkBadge('05:00', variant: BadgeVariant.spark),
               ],
             ),
             const SizedBox(height: PlinkSpacing.s2),
             Text(
-              'A flat, calm pulse. One hairline border, six-pixel radius, '
+              'A big, calm countdown. One hairline border, six-pixel radius, '
               'no shadow — surfaces sit on the paper, they don\'t float.',
               style: t.bodyMedium,
             ),

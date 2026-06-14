@@ -2,8 +2,8 @@ Instrument-panel surface: flat fill + 1px hairline border, never a drop shadow.
 
 ```jsx
 <Card num="01">
-  <h3>Metronome</h3>
-  <p>A precise classroom metronome.</p>
+  <h3>Timer</h3>
+  <p>A big, calm classroom countdown.</p>
 </Card>
 <Card variant="ink" interactive>Dark panel</Card>
 ```

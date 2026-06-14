@@ -1,7 +1,7 @@
 # Plink Labs — Design System
 
-**Plink Labs is a sound lab for the classroom.** Free, open-source classroom instruments —
-a metronome, tuner, timer, noise meter, picker, sampler — made by teachers, with no ads, no
+**Plink Labs is a lab for the classroom.** Free, open-source classroom tools —
+a timer, picker, planner, attendance roll, flashcards, whiteboard — made by teachers, with no ads, no
 tracking, and no accounts. This design system is the brand's foundations, components, and
 product surfaces, packaged so design agents can build on-brand interfaces and assets.
 
